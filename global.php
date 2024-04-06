@@ -1,13 +1,43 @@
 <?php
 session_start();
+// if(eregi("^C",$_SERVER['SCRIPT_FILENAME'])){
 
-// $global_vars = array(
-//     "DB_HOST" => "localhost",
-//     "DB_NAME" => "prathai_new",
-//     "DB_USER" => "prathai_new",
-//     "DB_PWD" => "twe31219#",
-//     "ENDPOINT" => "",
-// );
+// 	$global_vars = array(
+		
+// 	"DB_HOST"		=>	"localhost",
+// 	"DB_NAME"		=>	"prathai_new",
+// 	"DB_USER"		=>	"prathai_new",
+// 	"DB_PWD"		=>	"twe31219#",
+
+	
+// 	"ENDPOINT"		=>	""
+	
+// 	);
+
+
+// }else{
+// // /hsphere/local/home/academic/amerifob.com/
+
+// 	$global_vars = array(
+		
+// 	"DB_HOST"		=>	"localhost",
+// 	"DB_NAME"		=>	"prathai_new",
+// 	"DB_USER"		=>	"prathai_new",
+// 	"DB_PWD"		=>	"twe31219#",
+
+	
+// 	"ENDPOINT"		=>	""
+	
+// 	);
+// }
+
+	$global_vars = array(
+		"DB_HOST"		=>	"localhost",
+		"DB_NAME"		=>	"prathai_new",
+		"DB_USER"		=>	"prathai_new",
+		"DB_PWD"		=>	"twe31219#",
+		"ENDPOINT"		=>	""
+	);
 
 //จะให้โพสต์แล้วเป็นภาษาไทยลบ connect ชุดนี้ เปิดชุดที่ comment
 /*include("inc/config.php");
