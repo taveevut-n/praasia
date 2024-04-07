@@ -45,7 +45,7 @@ include("css.php");
 ?>	
 <script language="javascript" src="js/valid.js"></script>
 <script type="text/javascript" src="js/FlashObject.js"></script>
-<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script src="Scripts/swfobject.js" type="text/javascript"></script>
 </head>
 <body <?=$iSetBG?>>
 <div id="wrapper">
@@ -744,7 +744,7 @@ if($db22->f(id_layout)==3){
 </div>
 </div>
 <script type="text/javascript">
-swfobject.registerObject("FlashID");
+swfobject.registerObject("FlashID", "9.0.0", "expressInstall.swf");
 </script>
 </body>
 <!-- InstanceEnd --></html>

@@ -49,7 +49,7 @@ a:active {
 	color: #000;
 }
 </style>
-<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script src="Scripts/swfobject.js" type="text/javascript"></script>
 <!--jquery ui Local-->
 <link rel="stylesheet" href="func/jquery-ui-1.10.3/themes/base/jquery-ui.css" />
 <script src="func/jquery-ui-1.10.3/jquery-1.9.1.js"></script>
@@ -389,7 +389,7 @@ a:active {
   </tr>  
 </table>
 <!-- End Save for Web Slices --><script type="text/javascript">
-swfobject.registerObject("FlashID");
+swfobject.registerObject("FlashID", "9.0.0", "expressInstall.swf");
 </script>
 </body>
 </html>

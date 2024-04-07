@@ -31,7 +31,7 @@ a:active {
 	text-decoration: none;
 }
 </style>
-<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script src="Scripts/swfobject.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -309,7 +309,7 @@ a:active {
   </tr>
 </table>
 <script type="text/javascript">
-swfobject.registerObject("FlashID");
+swfobject.registerObject("FlashID", "9.0.0", "expressInstall.swf");
 </script>
 </body>
 </html>

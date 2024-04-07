@@ -16,7 +16,7 @@ body {
 	background-position:top center;
 }
 </style>
-<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script src="Scripts/swfobject.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -130,7 +130,7 @@ body {
   <area shape="rect" coords="16,9,189,41" href="index.php" />
 </map>
 <script type="text/javascript">
-swfobject.registerObject("FlashID");
+swfobject.registerObject("FlashID", "9.0.0", "expressInstall.swf");
 </script>
 </body>
 </html>

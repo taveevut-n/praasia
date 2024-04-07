@@ -115,7 +115,7 @@
 		<!--Iswallows Loading-->
 		<!-- <script src="http://iswallows.com/func/loading/loading.js"></script> -->
 
-    <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+    <script src="Scripts/swfobject.js" type="text/javascript"></script>
 	</head>
 	<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 
@@ -1989,7 +1989,7 @@
 			</tr>
 		</table>
 		<!-- End Save for Web Slices --><script type="text/javascript">
-			swfobject.registerObject("FlashID");
+			swfobject.registerObject("FlashID", "9.0.0", "expressInstall.swf");
 		</script>
 	</body>
 </html>

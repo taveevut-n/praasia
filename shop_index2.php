@@ -87,7 +87,7 @@ a:active {
 	#galleria{height:355px}
 
 </style>
-<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script src="Scripts/swfobject.js" type="text/javascript"></script>
 
 
 
@@ -1267,7 +1267,7 @@ a:active {
 <!-- End Save for Web Slices -->
 
 <script type="text/javascript">
-swfobject.registerObject("FlashID");
+swfobject.registerObject("FlashID", "9.0.0", "expressInstall.swf");
 </script>
 </body>
 </html>

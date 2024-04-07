@@ -647,12 +647,6 @@ if($db22->f(id_layout)==3){
 
 </div>
 
-<script type="text/javascript">
-
-swfobject.registerObject("FlashID");
-
-</script>
-
 </body>
 
 <!-- InstanceEnd --></html>
