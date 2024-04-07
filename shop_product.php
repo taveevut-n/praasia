@@ -104,7 +104,7 @@
 				margin-bottom: 3px;
 			}
 		</style>
-		<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+		
 		<!--jquery ui Local-->
 		<link rel="stylesheet" href="func/jquery-ui-1.10.3/themes/base/jquery-ui.css" />
 		<script src="func/jquery-ui-1.10.3/jquery-1.9.1.js"></script>
@@ -114,6 +114,8 @@
 		<script src="chatbox_editor/ckeditor/ckeditor.js"></script>
 		<!--Iswallows Loading-->
 		<!-- <script src="http://iswallows.com/func/loading/loading.js"></script> -->
+
+    <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
 	</head>
 	<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 
@@ -1977,11 +1979,11 @@
 			<tr>
 			<td align="center">
 				<!--BEGIN WEB STAT CODE-->
-				<script type="text/javascript" src="http://hits.truehits.in.th/data/t0031244.js"></script>
+				<!-- <script type="text/javascript" src="http://hits.truehits.in.th/data/t0031244.js"></script>
 				<noscript>
 					<a target="_blank" href="http://truehits.net/stat.php?id=t0031244"><img src="http://hits.truehits.in.th/noscript.php?id=t0031244" alt="Thailand Web Stat" border="0" width="14" height="17" /></a>
 					<a target="_blank" href="http://truehits.net/">Truehits.net</a>
-				</noscript>
+				</noscript> -->
 				<!-- END WEBSTAT CODE -->    
 			</td>
 			</tr>
