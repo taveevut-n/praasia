@@ -66,7 +66,7 @@ include("global_counter.php");
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" integrity="sha512-JXlkNyRSyOiD0Xs74MfO2rVQhB96EfRrdJQdp5ry48Tye3QqZVxs+M+hZU1s5PJ7YvOmxvF4jwfEaGxfNe6mPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-	<!-- <script src="func/jquery-ui-1.10.3/jquery.transit.min.js"></script> -->
+	<script src="func/jquery-ui-1.10.3/jquery.transit.min.js"></script>
 
 	<!--CKEditor-->
 
