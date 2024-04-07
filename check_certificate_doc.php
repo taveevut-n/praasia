@@ -20,7 +20,7 @@
 		<!--CKEditor-->
 		<script src="chatbox_editor/ckeditor/ckeditor.js"></script>
 		<!--Iswallows Loading-->
-		<script src="https://www.thaiwebeasy.com/iswallows/func/loading/loading.js"></script>
+		<!-- <script src="https://www.thaiwebeasy.com/iswallows/func/loading/loading.js"></script> -->
 		<!-- Lightbox -->
 		<link rel="stylesheet" href="colorbox.css"/>
 		<script src="jquery.colorbox.js"></script>

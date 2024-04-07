@@ -21,7 +21,7 @@
 	<script src="chatbox_editor/ckeditor/ckeditor.js"></script>
 
 	<!--Iswallows Loading-->
-	<script src="http://iswallows.com/func/loading/loading.js"></script>
+	<!-- <script src="http://iswallows.com/func/loading/loading.js"></script> -->
 
 	<!--Iswallows touchTouch-->
 	<link rel="stylesheet" href="http://iswallows.com/func/touch/assets/touchTouch/touchTouch.css" />

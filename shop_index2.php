@@ -39,7 +39,7 @@
 	<script src="chatbox_editor/ckeditor/ckeditor.js"></script>
 
 	<!--Iswallows Loading-->
-	<script src="http://iswallows.com/func/loading/loading.js"></script>
+	<!-- <script src="http://iswallows.com/func/loading/loading.js"></script> -->
 
 	<!-- Lightbox -->
 	<link rel="stylesheet" href="colorbox.css"/>

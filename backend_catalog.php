@@ -98,7 +98,7 @@ function MM_swapImage() { //v3.0
 	<script src="func/jquery-ui-1.10.3/jquery.transit.min.js"></script>
 
 	<!--Iswallows Loading-->
-	<script src="https://www.thaiwebeasy.com/iswallows/func/loading/loading.js"></script>
+	<!-- <script src="https://www.thaiwebeasy.com/iswallows/func/loading/loading.js"></script> -->
 
 </head>
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('images/images/menu-backend2_02.jpg','images/images/menu-backend2_04.jpg','images/images/menu-backend2_05.jpg','images/images/menu-backend2_06.jpg','images/images/menu-backend2_07.jpg','images/images/menu-backend2_08.jpg')">

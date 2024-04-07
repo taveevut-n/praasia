@@ -33,7 +33,7 @@
 	<script src="func/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
 	<script src="func/jquery-ui-1.10.3/jquery.transit.min.js"></script>
 	<!--Iswallows Loading-->
-	<script src="https://www.thaiwebeasy.com/iswallows/func/loading/loading.js"></script>
+	<!-- <script src="https://www.thaiwebeasy.com/iswallows/func/loading/loading.js"></script> -->
 	<link rel="stylesheet" type="text/css" href="backend_add_style.min.css">
 	<script type="text/javascript" src="backend_add_javascript.min.js"></script>
 
