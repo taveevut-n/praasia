@@ -59,14 +59,13 @@ include("global_counter.php");
 	<?php include("index.css"); ?>
 
 	<!--jquery ui Local-->
+  <link rel="stylesheet" href="func/jquery-ui-1.10.3/themes/base/jquery-ui.css" />
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.0/themes/base/jquery-ui.min.css" integrity="sha512-mPnhAODPbMSDp488VzQCtGZD1PwY/uFNY56g6OwNMI3g4NposdbUHzKFC1BNml14Ai+XwHgoJSBAnt5a9RyJtA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="func/jquery-ui-1.10.3/jquery-1.9.1.js"></script>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" integrity="sha512-jGR1T3dQerLCSm/IGEGbndPwzszJBlKQ5Br9vuB0Pw2iyxOy+7AK+lJcCC8eaXyz/9du+bkCy4HXxByhxkHf+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>     
+<script src="func/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" integrity="sha512-JXlkNyRSyOiD0Xs74MfO2rVQhB96EfRrdJQdp5ry48Tye3QqZVxs+M+hZU1s5PJ7YvOmxvF4jwfEaGxfNe6mPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-	<script src="func/jquery-ui-1.10.3/jquery.transit.min.js"></script>
+<script src="func/jquery-ui-1.10.3/jquery.transit.min.js"></script>
 
 	<!--CKEditor-->
 
