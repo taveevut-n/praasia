@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <project name="GPF Backend" />
+    <domainname name="http://localhost" />
+    <webroot path="zochat" />
+    <owner name="owner name" email=""
+           admin_name="amdin name" 
+           admin_email="projectth2010@gmail.com"
+           contact_name="contact email" 
+           contact_email="projectth2010@gmail.com"
+           reply_name="reply email" 
+           reply_email="projectth2010@gmail.com"
+           support_name="support email" 
+           support_email="projectth2010@gmail.com" />
+
+    <smtp 
+        username="projectth2010@gmail.com" 
+        password="projectth2010" 
+        host="ssl://mail.gmail.com" 
+        port="487" />
+    <google_map_api 
+        version="v2" 
+        key="AIzaSyCXJWxfdV1TRm0nR-8DkEG9_DY5oDFKcqI" />
+
+    <google_simple_access_api 
+        key="AIzaSyCXJWxfdV1TRm0nR-8DkEG9_DY5oDFKcqI" />
+
+   
+    
+     <database
+        type="mysql" 
+        server="localhost" 
+        database_name="prathai_new" 
+        username="prathai_new" 
+        password="twe31219#" 
+        version="5.1" />
+    
+
+</configuration>

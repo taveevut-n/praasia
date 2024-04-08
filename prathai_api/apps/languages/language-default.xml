@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+
+	<!-- =====================String value Golbal Page Start here .=============== -->
+	<string name="page-title" value="wshop.com สินค้าคุณภาพในราคาประหยัด" />
+
+
+	<string name="type-product" value="หมวดสินค้า" />
+	<string name="contact-us" value="ติดต่อเรา" />
+	<string name="help" value="ความช่วยเหลือ" />
+	<string name="help-topic-caption" value="หัวข้อความช่วยเหลือ" />
+	<string name="how-to-order" value="จะทำการสั่งสินค้าได้อย่างไร ?" />
+	<string name="how-to-receive-goods" value="จะรับสินค้าได้อย่างไร ?" />
+
+	<string name="username" value="ผู้ใช้งาน" />
+	<string name="password" value="รหัสผ่าน" />
+	<string name="re-password" value="ยืนยันรหัสผ่าน" />
+
+	<string name="sign-up" value="ลงทะเบียนสมาชิกใหม่" />
+	<string name="sign-in" value="ลงชื่อเข้าใช้" />
+
+	<string name="submit-button-label" value="ยินยอม" />
+	<string name="ok-button-label" value="ตกลง" />
+	<string name="cancel-button-label" value="ยกเลิก" />
+
+
+        <string name="save-data-success" value="บันทึกข้อมูลสำเร็จ" />
+        <string name="save-data-un-success" value="บันทึกข้อมูลไม่สำเร็จ" />
+        <string name="update-data-success" value="แก้ไขข้อมูลสำเร็จ" />
+        <string name="delete-data-success" value="ลบข้อมูลสำเร็จ" />
+        <string name="process-unsuccess" value="ดำเนินการไม่สำเร็จ" />
+        
+
+<!-- =====================String value Golbal Admin Page Start here .=============== -->
+	<string name="admin-page-title" value="ระบบจัดการ wshop" />
+	<string name="admin-nav-menu-caption" value="เมนูจัดการข้อมูลร้าน" />
+	<string name="manage-form" value="ฟอร์มจัดการข้อมูล" />
+	<string name="admin-type-product-url" value="จัดการประเภทสินค้า" />
+	<string name="admin-product-url" value="จัดการสินค้า" />
+	<string name="admin-order-message-url" value="ข้อความเจรจาซื้อสินค้า" />
+	<string name="admin-help-url" value="รายการความช่วยเหลือ" />
+
+        
+        
+</strings>

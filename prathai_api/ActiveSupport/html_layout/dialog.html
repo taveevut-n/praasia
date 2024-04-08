@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="3" />
+<title>dialog</title>
+
+<style>
+body {
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.overlay {
+	position: relative;
+	background-color: rgba(209, 209, 209, .7);
+	width: 400px;
+	height: 280px;
+	padding: 10px;
+	margin: 40px auto 40px auto;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+.panel {
+	position: relative;
+	width: 99.7%;
+	height: 99.7%;
+	padding: 0px;
+	border: solid thin #bbcbbb;
+	background-color: rgb(240, 240, 240);
+}
+
+.panel-title-bar {
+	color: rgb(220, 220, 220);
+	background-color: rgb(102, 153, 255);
+	width: 100%;
+	height: 30px;
+}
+
+.panel-title-bar div {
+	float: left;
+	position: relative;
+	margin-left: 2px;
+}
+
+.panel-icon {
+	padding: 2px;
+	width: 30px;
+	background-image: url(apps/publics/images/application.png);
+}
+
+.panel-title-text {
+	width: 66.5%;
+	padding: 1px;
+}
+
+.panel-title-control {
+	padding: 0px;
+	width: 90px;
+	height: inherit;
+}
+
+.panel-title-control div {
+	position: relative;
+	float: left;
+	margin-left: 2px;
+	width: 20px;
+	height: 22px;
+	height: inherit;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-raduis: 3px;
+}
+
+.panel-title-control div:hover {
+	position: relative;
+	float: left;
+	margin-left: 2px;
+	width: 20px;
+	height: 22px;
+	color: rgb(0, 0, 0);
+	text-shadow: 2px 2px 2px 2px white;
+	background-color: rgb(187, 209, 255);
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	cursor: pointer;
+}
+
+.panel-content-holder {
+	position: relative;
+	padding: 4px;
+	height: 75.8%;
+	overflow: auto;
+}
+
+.panel-buttom-bar {
+	position: relative;
+	font-size: 10px;
+	width: 99%;
+	margin: 4px auto 1px auto;
+	height: 20px;
+}
+
+.panel-buttom-bar div {
+	float: left;
+	position: relative;
+	margin-left: 2px;
+	height: 100%;
+	padding: 1px;
+}
+
+.panel-buttom-left {
+	width: 30%;
+}
+
+.panel-buttom-middle {
+	width: 42.5%;
+}
+
+.panel-buttom-right {
+	width: 90px;
+	text-align: right;
+}
+
+.list-number-paginator {
+	list-style-type: none;
+	width: 300px;
+	height: 35px;
+}
+
+.list-number-paginator li {
+	float: left;
+	width: 22px;
+	color: rgb(220, 220, 220);
+	text-align: center;
+	margin-left: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background-color: rgb(102, 153, 255);
+}
+
+.list-number-paginator li:hover {
+	float: left;
+	width: 22px;
+	color: #757575;
+	margin-left: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background-color: rgb(187, 209, 255);
+	cursor: pointer;
+}
+
+.list-number-paginator-selected {
+	color: #757575 !important;
+	background-color: rgb(187, 209, 255) !important;
+}
+
+.list-nav-link {
+	list-style-type: none;
+	width: 300px;
+	height: 25px;
+	font-size: 12px;
+}
+
+.list-nav-link li {
+	vertical-align: middle;
+	float: left;
+	width: 70px;
+	height: 25px;
+	color: #ffffff;
+	text-align: center;
+	margin-left: 5px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: #66cc33;
+}
+
+.list-nav-link li:hover {
+	vertical-align: middle;
+	float: left;
+	width: 70px;
+	height: 25px;
+	color: #888888;
+	margin-left: 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	background-color: #ffcc66;
+	cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+	<ul class="list-nav-link">
+		<li>หน้าแรก</li>
+		<li>จัดการสินค้า</li>
+		<li>ลงชื่อออก</li>
+	</ul>
+
+	<div class="overlay">
+		<div class="panel">
+			<div class="panel-title-bar">
+				<div class="panel-icon" />
+				<div class="panel-title-text">title-bar</div>
+				<div class="panel-title-control">
+					<div class="panel-control-config">*</div>
+					<div class="panel-control-restore">@</div>
+					<div class="panel-control-minimize">_</div>
+					<div class="panel-control-close">x</div>
+				</div>
+			</div>
+
+			<div class="panel-content-holder">
+				<div class="panel-content-detail">
+					<p>content here. content here. content here. content here.</p>
+					<p>content here. content here. content here. content here.</p>
+					<p>content here. content here. content here. content here.</p>
+					<p>content here. content here. content here. content here.</p>
+					<p>content here. content here. content here. content here.</p>
+					<p>content here. content here. content here. content here.</p>
+					<p>content here. content here. content here. content here.</p>
+					<p>content here. content here. content here. content here.</p>
+				</div>
+			</div>
+
+			<div class="panel-buttom-bar">
+				<div class="panel-buttom-left" />
+				<div class="panel-buttom-middle" />
+				<div class="panel-buttom-right">more...</div>
+			</div>
+		</div>
+	</div>
+
+	<ul class="list-number-paginator">
+		<li>&lt;</li>
+		<li>1</li>
+		<li class="list-number-paginator-selected">2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>&gt;</li>
+	</ul>
+
+	<div id="" class="overlay">
+		<div class="panel">
+			<div class="panel-title-bar">
+				<div class="panel-icon">icon</div>
+				<div class="panel-title-text">title-bar</div>
+				<div class="panel-title-control">
+					<div class="panel-control-config">*</div>
+					<div class="panel-control-restore">@</div>
+					<div class="panel-control-minimize">_</div>
+					<div class="panel-control-close">x</div>
+				</div>
+			</div>
+
+			<div class="panel-content-holder">
+				<div class="panel-content-detail">
+					<p>content here. content here. content here. content here.</p>
+				</div>
+			</div>
+
+			<div class="panel-buttom-bar">
+				<div class="panel-buttom-left"></div>
+				<div class="panel-buttom-middle"></div>
+				<div class="panel-buttom-right">more...</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
