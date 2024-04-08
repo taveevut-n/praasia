@@ -62,7 +62,7 @@
 								}
 								?>
 							<tr>
-								<td align="center" style="padding:2px"><a href="<?=$url?>" target="_blank"><img src="resize/w180/pra/img/banner/<?=$db->f(banner_img)?>" width="180" /></a></td>
+								<td align="center" style="padding:2px"><a href="<?=$url?>" target="_blank"><img src="slir/w180/pra/img/banner/<?=$db->f(banner_img)?>" width="180" /></a></td>
 							</tr>
 							<? } ?>
 						</table>
@@ -233,7 +233,7 @@
 												while($db->next_record()){ ?>
 											<table width="138" border="0" align="center" cellpadding="3" cellspacing="0" style="float:left; margin:1px">
 												<tr>
-												<td align="center"><a href="detail_pra.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'resize/w97-h97-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="97" height="97" border="3" /></a></td>
+												<td align="center"><a href="detail_pra.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'slir/w97-h97-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="97" height="97" border="3" /></a></td>
 												</tr>
 												<tr>
 												<td align="left">
@@ -318,7 +318,7 @@
 												?>
 											<table width="135" border="0" align="center" cellpadding="3" cellspacing="0" style="float:left; margin:1px">
 												<tr>
-												<td align="center"><a href="detail_pra2.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'resize/w97-h97-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="97" height="97" border="3" /></a></td>
+												<td align="center"><a href="detail_pra2.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'slir/w97-h97-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="97" height="97" border="3" /></a></td>
 												</tr>
 												<tr>
 												<td align="left">

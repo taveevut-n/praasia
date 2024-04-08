@@ -286,7 +286,7 @@ a:active {
 							}
 						  ?>
                           <tr bgcolor="<?=($v%2==0)?"#3c1204":"#3c1204"?>">
-                            <td height="110" align="center" bgcolor="#3c1204"><img src="../resize/w100-h100/img/certificate/<?=$db->f(pic1)?>" width="60" height="86" /></td>
+                            <td height="110" align="center" bgcolor="#3c1204"><img src="../slir/w100-h100/img/certificate/<?=$db->f(pic1)?>" width="60" height="86" /></td>
                             <td align="center" style="color:#FC0; font-size:12px" bgcolor="#3c1204"><?=$db->f(cert_amulet)?>
                             <br />(<?=$db->f(cert_code)?>)</td>
                             <td align="center" bgcolor="#3c1204" style="color:#FC0; font-size:12px"><?=$db->f(cert_owner)?></td>

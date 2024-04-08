@@ -124,84 +124,84 @@
                         if($dbimg->f(pic1)!=''){
                     ?>
                     <a href="img/car/<?=$dbimg->f(pic1)?>">
-                        <img src="/resize/w45-h40/img/car/<?=$dbimg->f(pic1)?>",data-big="/resize/w710-h320/img/car/<?=$dbimg->f(pic2)?>"/>
+                        <img src="/slir/w45-h40/img/car/<?=$dbimg->f(pic1)?>",data-big="/slir/w710-h320/img/car/<?=$dbimg->f(pic2)?>"/>
                     </a>
                     <?php
                         }
                         if($dbimg->f(pic2)!=''){
                     ?>
                     <a href="img/car/<?=$dbimg->f(pic2)?>">
-                        <img src="/resize/w45-h40/img/car/<?=$dbimg->f(pic2)?>",data-big="/resize/w298-h285/img/car/<?=$dbimg->f(pic2)?>"/>
+                        <img src="/slir/w45-h40/img/car/<?=$dbimg->f(pic2)?>",data-big="/slir/w298-h285/img/car/<?=$dbimg->f(pic2)?>"/>
                     </a>
                     <?php
                         }
                         if($dbimg->f(pic3)!=''){
                     ?>
                     <a href="img/car/<?=$dbimg->f(pic3)?>">
-                        <img src="/resize/w45-h40/img/car/<?=$dbimg->f(pic3)?>",data-big="/resize/w298-h285/img/car/<?=$dbimg->f(pic3)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
+                        <img src="/slir/w45-h40/img/car/<?=$dbimg->f(pic3)?>",data-big="/slir/w298-h285/img/car/<?=$dbimg->f(pic3)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
                     </a>    
                     <?php
                         }
                         if($dbimg->f(pic4)!=''){
                     ?>
                     <a href="img/car/<?=$dbimg->f(pic4)?>">
-                        <img src="/resize/w45-h40/img/car/<?=$dbimg->f(pic4)?>",data-big="/resize/w298-h285/img/car/<?=$dbimg->f(pic4)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
+                        <img src="/slir/w45-h40/img/car/<?=$dbimg->f(pic4)?>",data-big="/slir/w298-h285/img/car/<?=$dbimg->f(pic4)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
                     </a>
                     <?php
 						}
 						if($dbimg->f(pic5)!=''){
 					?>
                     <a href="img/car/<?=$dbimg->f(pic5)?>">
-                        <img src="/resize/w45-h40/img/car/<?=$dbimg->f(pic5)?>",data-big="/resize/w298-h285/img/car/<?=$dbimg->f(pic5)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
+                        <img src="/slir/w45-h40/img/car/<?=$dbimg->f(pic5)?>",data-big="/slir/w298-h285/img/car/<?=$dbimg->f(pic5)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
                     </a>                    
                     <?php
 						}
 						if($dbimg->f(pic6)!=''){
 					?>
                     <a href="img/car/<?=$dbimg->f(pic6)?>">
-                        <img src="/resize/w45-h40/img/car/<?=$dbimg->f(pic6)?>",data-big="/resize/w298-h285/img/car/<?=$dbimg->f(pic6)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
+                        <img src="/slir/w45-h40/img/car/<?=$dbimg->f(pic6)?>",data-big="/slir/w298-h285/img/car/<?=$dbimg->f(pic6)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
                     </a>                    
                     <?php
 						}
 						if($dbimg->f(pic7)!=''){
 					?>
                     <a href="img/car/<?=$dbimg->f(pic7)?>">
-                        <img src="/resize/w45-h40/img/car/<?=$dbimg->f(pic7)?>",data-big="/resize/w298-h285/img/car/<?=$dbimg->f(pic7)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
+                        <img src="/slir/w45-h40/img/car/<?=$dbimg->f(pic7)?>",data-big="/slir/w298-h285/img/car/<?=$dbimg->f(pic7)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
                     </a>                    
                     <?php
 						}
 						if($dbimg->f(pic8)!=''){
 					?>
                     <a href="img/car/<?=$dbimg->f(pic8)?>">
-                        <img src="/resize/w45-h40/img/car/<?=$dbimg->f(pic8)?>",data-big="/resize/w298-h285/img/car/<?=$dbimg->f(pic8)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
+                        <img src="/slir/w45-h40/img/car/<?=$dbimg->f(pic8)?>",data-big="/slir/w298-h285/img/car/<?=$dbimg->f(pic8)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
                     </a>                    
                     <?php
 						}
 						if($dbimg->f(pic9)!=''){
 					?>
                     <a href="img/car/<?=$dbimg->f(pic9)?>">
-                        <img src="/resize/w45-h40/img/car/<?=$dbimg->f(pic9)?>",data-big="/resize/w298-h285/img/car/<?=$dbimg->f(pic9)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
+                        <img src="/slir/w45-h40/img/car/<?=$dbimg->f(pic9)?>",data-big="/slir/w298-h285/img/car/<?=$dbimg->f(pic9)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
                     </a>                    
                     <?php
 						}
 						if($dbimg->f(pic10)!=''){
 					?>
                     <a href="img/car/<?=$dbimg->f(pic4)?>">
-                        <img src="/resize/w45-h40/img/car/<?=$dbimg->f(pic10)?>",data-big="/resize/w298-h285/img/car/<?=$dbimg->f(pic10)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
+                        <img src="/slir/w45-h40/img/car/<?=$dbimg->f(pic10)?>",data-big="/slir/w298-h285/img/car/<?=$dbimg->f(pic10)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
                     </a>                    
                     <?php
 						}
 						if($dbimg->f(pic11)!=''){
 					?>
                     <a href="img/car/<?=$dbimg->f(pic11)?>">
-                        <img src="/resize/w45-h40/img/car/<?=$dbimg->f(pic11)?>",data-big="/resize/w298-h285/img/car/<?=$dbimg->f(pic11)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
+                        <img src="/slir/w45-h40/img/car/<?=$dbimg->f(pic11)?>",data-big="/slir/w298-h285/img/car/<?=$dbimg->f(pic11)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
                     </a>                    
                     <?php
 						}
 						if($dbimg->f(pic12)!=''){
 					?>           
                     <a href="img/car/<?=$dbimg->f(pic12)?>">
-                        <img src="/resize/w45-h40/img/car/<?=$dbimg->f(pic12)?>",data-big="/resize/w298-h285/img/car/<?=$dbimg->f(pic12)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
+                        <img src="/slir/w45-h40/img/car/<?=$dbimg->f(pic12)?>",data-big="/slir/w298-h285/img/car/<?=$dbimg->f(pic12)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
                     </a>                                                                                                                                                     
                     <?php
                             }

@@ -650,7 +650,7 @@ a:active {
 				<tr>
 					<td bgcolor="#000000">
 						<a href="shop_product.php?product_id=<?=$db->f(product_id)?>">
-							<img src="<?=($dbhot->f(pic1)!="")?'/resize/w140-h135/img/amulet/'.$dbhot->f(pic1):"images/clear.gif"?>" alt="" width="140" height="135" border="0" />
+							<img src="<?=($dbhot->f(pic1)!="")?'/slir/w140-h135/img/amulet/'.$dbhot->f(pic1):"images/clear.gif"?>" alt="" width="140" height="135" border="0" />
 						</a>
 					</td>
 				</tr>
@@ -969,7 +969,7 @@ a:active {
 				<tr>
 					<td bgcolor="#000000">
 						<a href="shop_product.php?product_id=<?=$db->f(product_id)?>">
-							<img src="<?=($db->f(pic1)!="")?'/resize/w155-h150/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="155" height="150" border="0" />
+							<img src="<?=($db->f(pic1)!="")?'/slir/w155-h150/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="155" height="150" border="0" />
 						</a>
 					</td>
 				</tr>

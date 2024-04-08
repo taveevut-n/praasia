@@ -80,7 +80,7 @@
 				<tr>
 					<td bgcolor="#000000">
 						<a href="shop_product.php?product_id=<?=$db->f(product_id)?>">
-							<!-- <img src="<?=($db->f(productimg)!="")?'/resize/w155-h150/img/amulet/'.$db->f(productimg):"images/clear.gif"?>" alt="" width="155" height="150" border="0" /> -->
+							<!-- <img src="<?=($db->f(productimg)!="")?'/slir/w155-h150/img/amulet/'.$db->f(productimg):"images/clear.gif"?>" alt="" width="155" height="150" border="0" /> -->
 							<img src="<?=($db->f(productimg)!="")?'/img/amulet/'.$db->f(productimg):"images/clear.gif"?>" alt="" width="155" height="150" border="0" />
 						</a>
 					</td>

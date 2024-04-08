@@ -969,7 +969,7 @@
 													</td>
 													<td style="color:#FC0;"><input name="file1" type="file" id="file1">
 														<?php if($_GET['e_product_id']){ ?>						
-														<img src="<?=($db5->f(pic1)!="")?"/resize/w20-h20/img/amulet/".$db5->f(pic1):"/images/clear.gif"?>" width="20" height="18"  border="0" /> 
+														<img src="<?=($db5->f(pic1)!="")?"/slir/w20-h20/img/amulet/".$db5->f(pic1):"/images/clear.gif"?>" width="20" height="18"  border="0" /> 
 														<? } ?>
 														<span style="color:#090">
 															<?php echo $language['Text_PrapicRequired'];?>
@@ -982,7 +982,7 @@
 													</td>
 													<td style="color:#FC0;"><input name="file2" type="file" id="file2">
 														<?php if($_GET['e_product_id']){ ?>						
-														<img src="<?=($db5->f(pic2)!="")?"/resize/w20-h20/img/amulet/".$db5->f(pic2):"/images/clear.gif"?>" width="20" height="18"  border="0" /> 
+														<img src="<?=($db5->f(pic2)!="")?"/slir/w20-h20/img/amulet/".$db5->f(pic2):"/images/clear.gif"?>" width="20" height="18"  border="0" /> 
 														<? } ?> 
 													</td>
 												</tr>
@@ -992,7 +992,7 @@
 													</td>
 													<td style="color:#FC0;"><input name="file3" type="file" id="file3">
 														<?php if($_GET['e_product_id']){ ?>						
-														<img src="<?=($db5->f(pic3)!="")?"/resize/w20-h20/img/amulet/".$db5->f(pic3):"/images/clear.gif"?>" width="20" height="18"  border="0" /> 
+														<img src="<?=($db5->f(pic3)!="")?"/slir/w20-h20/img/amulet/".$db5->f(pic3):"/images/clear.gif"?>" width="20" height="18"  border="0" /> 
 														<? } ?> 
 													</td>
 												</tr>
@@ -1002,7 +1002,7 @@
 													</td>
 													<td style="color:#FC0;"><input name="file4" type="file" id="file4">
 														<?php if($_GET['e_product_id']){ ?>						
-														<img src="<?=($db5->f(pic4)!="")?"/resize/w20-h20/img/amulet/".$db5->f(pic4):"/images/clear.gif"?>" width="20" height="18"  border="0" /> 
+														<img src="<?=($db5->f(pic4)!="")?"/slir/w20-h20/img/amulet/".$db5->f(pic4):"/images/clear.gif"?>" width="20" height="18"  border="0" /> 
 														<? } ?> 
 													</td>
 												</tr>

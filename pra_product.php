@@ -392,7 +392,7 @@ VALUES (
    while($db->next_record()){
    ?>		
                       <tr  bgcolor="<?=($v%2==1)?"#3c1204":"#2f0d02"?>">
-                        <td height="100" align="center" ><img src="<?=($db->f(pic1)!="")?"../resize/w90-h90-c1:1/upimg/product/".$db->f(pic1):"../images/clear.gif"?>" width="90" height="90"  border="0" /></td>
+                        <td height="100" align="center" ><img src="<?=($db->f(pic1)!="")?"../slir/w90-h90-c1:1/upimg/product/".$db->f(pic1):"../images/clear.gif"?>" width="90" height="90"  border="0" /></td>
                         <td ><span style="color:#FFFFFF; font-size:12px"><?=$db->f(name_product)?></span></td>
                         <td width="11%" align="right" style="padding-right:3px;"><span style="color:#FFFFFF; font-size:12px"><?=g_number($db->f(price))?></span></td>
                         <td width="7%" align="center" ><a href="?e_product_id=<?=$db->f(id_product)?>" ><img src="images/edit.gif" alt="แก้ไข" width="19" height="23" border="0" /></a></td>

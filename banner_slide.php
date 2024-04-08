@@ -107,7 +107,7 @@ function MM_swapImage() { //v3.0
 		      <tr>
 		        <td align="center"><table width="90%" border="0" cellspacing="0" cellpadding="0">
 		          <tr>
-		            <td align="center"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"><img src="<?=($db->f(pic1)!="")?'/resize/w168-h168-c1:1/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="168" height="168" border="0" /></a></td>
+		            <td align="center"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"><img src="<?=($db->f(pic1)!="")?'/slir/w168-h168-c1:1/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="168" height="168" border="0" /></a></td>
 		            </tr>
 	            </table></td>
 	          </tr>
@@ -133,7 +133,7 @@ function MM_swapImage() { //v3.0
 		      <tr>
 		        <td align="center"><table width="90%" border="0" cellspacing="0" cellpadding="0">
 		          <tr>
-		            <td align="center"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"><img src="<?=($db->f(pic1)!="")?'/resize/w168-h168-c1:1/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="168" height="168" border="0" /></a></td>
+		            <td align="center"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"><img src="<?=($db->f(pic1)!="")?'/slir/w168-h168-c1:1/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="168" height="168" border="0" /></a></td>
 		            </tr>
 	            </table></td>
 	          </tr>
@@ -158,7 +158,7 @@ function MM_swapImage() { //v3.0
 		      <tr>
 		        <td align="center"><table width="90%" border="0" cellspacing="0" cellpadding="0">
 		          <tr>
-		            <td align="center"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"><img src="<?=($db->f(pic1)!="")?'/resize/w168-h168-c1:1/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="168" height="168" border="0" /></a></td>
+		            <td align="center"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"><img src="<?=($db->f(pic1)!="")?'/slir/w168-h168-c1:1/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="168" height="168" border="0" /></a></td>
 		            </tr>
 	            </table></td>
 	          </tr>
@@ -183,7 +183,7 @@ function MM_swapImage() { //v3.0
 		      <tr>
 		        <td align="center"><table width="90%" border="0" cellspacing="0" cellpadding="0">
 		          <tr>
-		            <td align="center"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"><img src="<?=($db->f(pic1)!="")?'/resize/w168-h168-c1:1/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="168" height="168" border="0" /></a></td>
+		            <td align="center"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"><img src="<?=($db->f(pic1)!="")?'/slir/w168-h168-c1:1/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="168" height="168" border="0" /></a></td>
 		            </tr>
 	            </table></td>
 	          </tr>
@@ -208,7 +208,7 @@ function MM_swapImage() { //v3.0
 		      <tr>
 		        <td align="center"><table width="90%" border="0" cellspacing="0" cellpadding="0">
 		          <tr>
-		            <td align="center"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"><img src="<?=($db->f(pic1)!="")?'/resize/w168-h168-c1:1/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="168" height="168" border="0" /></a></td>
+		            <td align="center"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"><img src="<?=($db->f(pic1)!="")?'/slir/w168-h168-c1:1/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="168" height="168" border="0" /></a></td>
 		            </tr>
 	            </table></td>
 	          </tr>

@@ -180,7 +180,7 @@ a:active {
 							while($db->next_record()){
 						  ?>
                           <tr bgcolor="<?=($v%2==0)?"#F8F8F8":"#FFFFFF"?>">
-                            <td height="110" align="left" bgcolor="#3c1204" style="padding-left:10px" ><img src="../resize/w274-h100-c4:1/pra/img/banner/<?=$db->f(banner_img)?>" width="274" height="100" /></td>
+                            <td height="110" align="left" bgcolor="#3c1204" style="padding-left:10px" ><img src="../slir/w274-h100-c4:1/pra/img/banner/<?=$db->f(banner_img)?>" width="274" height="100" /></td>
                             <td align="center" bgcolor="#3c1204" class="sidemenu" >&nbsp;</td>
                             <td width="8%" align="center" bgcolor="#3c1204"><a href="?e_banner_id=<?=$db->f(banner_id)?>" ><img src="../images/edit.gif" alt="แก้ไข" width="19" height="23" border="0" /></a></td>
                             <td width="8%" align="center" bgcolor="#3c1204" ><a href="?d_banner_id=<?=$db->f(banner_id)?>" onClick="return confirm('Confirm Delete?')" ><img src="../images/del.gif" alt="ลบ" width="19" height="23" border="0" /></a></td>

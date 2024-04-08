@@ -47,8 +47,8 @@
 
 		<!-- Facebook Shared Data -->
 		<meta property="og:type" name="og:type" content="website" />
-		<meta property="og:image" name="og:image" content="http://<?php echo $_SERVER['SERVER_NAME'];?>/resize/w200/img/amulet/<?php echo $dbproduct->f(pic1);?>"/>
-		<meta property="og:image" content="http://<?php echo $_SERVER['SERVER_NAME'];?>/resize/w200/img/amulet/<?php echo $dbproduct->f(pic1);?>" />
+		<meta property="og:image" name="og:image" content="http://<?php echo $_SERVER['SERVER_NAME'];?>/slir/w200/img/amulet/<?php echo $dbproduct->f(pic1);?>"/>
+		<meta property="og:image" content="http://<?php echo $_SERVER['SERVER_NAME'];?>/slir/w200/img/amulet/<?php echo $dbproduct->f(pic1);?>" />
 		<meta name="og:title" content="<?php echo $dbproduct->f(name)?>" />
 		<meta name="og:description" content="<?php echo $dbproduct->f(name)?>" />
 		<meta name="og:site_name" property="og:site_name" content="http://<?php echo $_SERVER['SERVER_NAME'];?>/shop_product.php?product_id=<?php echo $dbproduct->f(product_id)?>" />
@@ -245,16 +245,16 @@
 						<td align="center" style="border: 1px #fff solid;">
 						<table width="100%" border="0" cellspacing="0" cellpadding="5">
 							<!-- <tr>
-								<td align="center"><img src="<?=($dbproduct->f(pic1)!="")?"/resize/w900/img/amulet/".$dbproduct->f(pic1):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
+								<td align="center"><img src="<?=($dbproduct->f(pic1)!="")?"/slir/w900/img/amulet/".$dbproduct->f(pic1):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
 							</tr>
 							<tr>
-								<td align="center"><img src="<?=($dbproduct->f(pic2)!="")?"/resize/w900/img/amulet/".$dbproduct->f(pic2):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
+								<td align="center"><img src="<?=($dbproduct->f(pic2)!="")?"/slir/w900/img/amulet/".$dbproduct->f(pic2):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
 							</tr>
 							<tr>
-								<td align="center"><img src="<?=($dbproduct->f(pic3)!="")?"/resize/w900/img/amulet/".$dbproduct->f(pic3):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
+								<td align="center"><img src="<?=($dbproduct->f(pic3)!="")?"/slir/w900/img/amulet/".$dbproduct->f(pic3):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
 							</tr>
 							<tr>
-								<td align="center"><img src="<?=($dbproduct->f(pic4)!="")?"/resize/w900/img/amulet/".$dbproduct->f(pic4):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
+								<td align="center"><img src="<?=($dbproduct->f(pic4)!="")?"/slir/w900/img/amulet/".$dbproduct->f(pic4):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
 							</tr> -->
 
 							<tr>
@@ -1719,7 +1719,7 @@
 								<td align="center">
 									<table width="100%" border="0" cellspacing="0" cellpadding="0">
 									<tr>
-										<!-- <td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>" target="_blank"><img src="<?=($db->f(pic1)!="")?'/resize/w152-h150/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="152" height="150" border="0" /></a></td> -->
+										<!-- <td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>" target="_blank"><img src="<?=($db->f(pic1)!="")?'/slir/w152-h150/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="152" height="150" border="0" /></a></td> -->
 										<td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>" target="_blank"><img src="<?=($db->f(pic1)!="")?'/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="152" height="150" border="0" /></a></td>
 									</tr>
 									</table>

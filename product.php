@@ -101,7 +101,7 @@ a:active {
 		  <tr bgcolor="<?=($v%2==1)?"#311407":"#4f3b2a"?>" class="sidemenu">
 		    <td height="25" align="center">
 	        <?=$db->f(product_id)?></td>
-		    <td align="center"><img src="/resize/w125-h125-c1:1/img/amulet/<?=$db->f(pic1)?>" width="125" height="125" /></td>
+		    <td align="center"><img src="/slir/w125-h125-c1:1/img/amulet/<?=$db->f(pic1)?>" width="125" height="125" /></td>
 		    <td align="left"><?=$db->f(name)?></td>
 		    <td align="center"><?=$db->f(price)?></td>
 		    <td align="center" class="sidemenu">

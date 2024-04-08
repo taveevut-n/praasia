@@ -70,7 +70,7 @@ body {
             <td colspan="7"><table width="100%" cellspacing="0" cellpadding="0" background="<?=($v%2==1)?"images/bg-board1.jpg":"images/bg-board2.jpg"?>" style=" border-bottom:solid 1px #FFF ;border-collapse:collapse">
           <tr>
             <td width="41" height="90" align="center"><span style="color:#FFFFFF; font-size:14px"><?=$db->f(id_product)?></span></td>
-            <td width="88" valign="top" style="padding-left:7px; padding-top:4px"><a  href="detail_pra.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'resize/w77-h77-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="77" height="77" border="0" /></a></td>
+            <td width="88" valign="top" style="padding-left:7px; padding-top:4px"><a  href="detail_pra.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'slir/w77-h77-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="77" height="77" border="0" /></a></td>
             <td width="170" style="padding-left:3px"><a  href="detail_pra.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><span style="color:#FFF22D; font-size:13px"><?=$db->f(name_product)?></span></a></td>
             <td width="78" style="padding-left:5px"><span style="color:#FFFFFF; font-size:14px"><?=$db->f(price)?></span></td>
             <td width="348" style="padding-left:5px"><span style="color:#FFFFFF; font-size:14px; text-decoration:none"><?=$db->f(s_detail)?></span></td>

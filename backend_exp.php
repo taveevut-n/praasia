@@ -393,7 +393,7 @@ function MM_swapImage() { //v3.0
 							while($db->next_record()){
 						  ?>
                           <tr bgcolor="<?=($v%2==0)?"#F8F8F8":"#FFFFFF"?>">
-                            <td height="110" align="left" bgcolor="#3c1204" style="padding-left:10px" ><img src="/resize/w100-h100/img/exp/<?=$db->f(pic1)?>" width="100" height="100" /></td>
+                            <td height="110" align="left" bgcolor="#3c1204" style="padding-left:10px" ><img src="/slir/w100-h100/img/exp/<?=$db->f(pic1)?>" width="100" height="100" /></td>
                             <td align="left" bgcolor="#3c1204"  style="color:#FC0"><?=$db->f(topic)?></td>
                             <td width="13%" align="center" bgcolor="#3c1204"><a href="?e_geji_id=<?=$db->f(exp_id)?>" ><img src="../images/edit.gif" alt="แก้ไข" width="19" height="23" border="0" /></a></td>
                             <td width="9%" align="center" bgcolor="#3c1204" ><a href="?d_geji_id=<?=$db->f(exp_id)?>" onClick="return confirm('Confirm Delete?')" ><img src="../images/del.gif" alt="ลบ" width="19" height="23" border="0" /></a></td>

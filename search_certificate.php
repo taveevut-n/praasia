@@ -74,7 +74,7 @@
 																										<tr>
 																											<td bgcolor="#000000">
 																												<a href="certificate.php?cert_code=<?=$db->f(cert_code)?>" target="_blank">
-																													<img src="../resize/w152-h150/img/certificate/<?=$db->f(pic1)?>" width="152" height="150" />
+																													<img src="../slir/w152-h150/img/certificate/<?=$db->f(pic1)?>" width="152" height="150" />
 																												</a>
 																											</td>
 																										</tr>

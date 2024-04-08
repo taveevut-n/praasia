@@ -65,7 +65,7 @@
 														<tr>
 															<td bgcolor="#000000">
 																<a href="shop_index.php?shop=<?=$dbshop->f(id)?>">
-																	<img class="Img_shop" src="<?=($dbshop->f(head2)!="")?'/resize/w169-h160/img/head/'.$dbshop->f(head2):"images/logodefualt.jpg"?>" alt="" width="153" height="150" border="0" />
+																	<img class="Img_shop" src="<?=($dbshop->f(head2)!="")?'/slir/w169-h160/img/head/'.$dbshop->f(head2):"images/logodefualt.jpg"?>" alt="" width="153" height="150" border="0" />
 																</a></td>
 														</tr>
 													</table>

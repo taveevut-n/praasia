@@ -114,7 +114,7 @@
 																														<tr>
 																																<td bgcolor="#000000">
 																																		
-																																		<img src="<?=($db->f(datacert_pic)!="")?'/resize/w152-h150/img/datacertificate/'.$db->f(datacert_pic):"images/clear.gif"?>" alt="" width="152" height="150" border="0" />
+																																		<img src="<?=($db->f(datacert_pic)!="")?'/slir/w152-h150/img/datacertificate/'.$db->f(datacert_pic):"images/clear.gif"?>" alt="" width="152" height="150" border="0" />
 																																	
 																																</td>
 																														</tr>

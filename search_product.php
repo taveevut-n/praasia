@@ -85,7 +85,7 @@
 													<td align="center">
 														<table width="100%" border="0" cellspacing="0" cellpadding="0">
 															<tr>
-																<td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"><img src="<?=($db->f(productimg)!="")?'/resize/w152-h150/img/amulet/'.$db->f(productimg):"images/clear.gif"?>" alt="" width="152" height="150" border="0" /></a></td>
+																<td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"><img src="<?=($db->f(productimg)!="")?'/slir/w152-h150/img/amulet/'.$db->f(productimg):"images/clear.gif"?>" alt="" width="152" height="150" border="0" /></a></td>
 															</tr>
 														</table>
 													</td>

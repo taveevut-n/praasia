@@ -209,7 +209,7 @@ a:active {
 							while($db->next_record()){
 						  ?>
                           <tr bgcolor="<?=($v%2==0)?"#3c1204":"#3c1204"?>">
-                            <td height="110" align="center" bgcolor="#3c1204"><img src="../resize/w100-h100/img/content_certificate/<?=$db->f(pic2)?>" width="60" height="86" /></td>
+                            <td height="110" align="center" bgcolor="#3c1204"><img src="../slir/w100-h100/img/content_certificate/<?=$db->f(pic2)?>" width="60" height="86" /></td>
                             <td align="center" style="color:#FC0; font-size:12px" bgcolor="#3c1204"><?=$db->f(name)?></td>
                             <td align="center" bgcolor="#3c1204" style="color:#FC0; font-size:12px">
 							<? if ($db->f(status)=='0') { ?>

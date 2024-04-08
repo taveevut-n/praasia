@@ -419,7 +419,7 @@
 									<div class="box-checkbox">
 										<input type="checkbox" name="item[]" value="<?=$db->f(datacert_id)?>">
 									</div>
-										<img src="/resize/w125-h125-c1:1/img/datacertificate/<?=$db->f(datacert_pic)?>" width="125" height="125" />
+										<img src="/slir/w125-h125-c1:1/img/datacertificate/<?=$db->f(datacert_pic)?>" width="125" height="125" />
 								</td>
 								<td align="left" width="150"><?=$db->f(datacert_amulet)?></td>
 								<td align="center">

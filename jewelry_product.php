@@ -337,7 +337,7 @@ txt_rich("detail",$love1,"save",600,400);  ?>
    while($db->next_record()){
    ?>		
                       <tr>
-                        <td height="100" align="center" bgcolor="#67501D" ><img src="<?=($db->f(pic1)!="")?"../resize/w90/jewelry/upimg/product/".$db->f(pic1):"../images/clear.gif"?>"  border="0" /></td>
+                        <td height="100" align="center" bgcolor="#67501D" ><img src="<?=($db->f(pic1)!="")?"../slir/w90/jewelry/upimg/product/".$db->f(pic1):"../images/clear.gif"?>"  border="0" /></td>
                         <td bgcolor="#67501D" ><span style="color:#FFFFFF; font-size:12px"><?=$db->f(name)?></span></td>
                         <td width="11%" align="right" bgcolor="#67501D" style="padding-right:3px;"><span style="color:#FFFFFF; font-size:12px"><?=g_number($db->f(price))?></span></td>
                         <td width="7%" align="center" bgcolor="#67501D"><a href="?e_product_id=<?=$db->f(id)?>" ><img src="images/edit.gif" alt="แก้ไข" width="19" height="23" border="0" /></a></td>

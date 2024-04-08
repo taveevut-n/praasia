@@ -46,7 +46,7 @@
 		
 		<!-- Facebook Shared Data -->
 		<meta property="og:type" name="og:type" content="website" />
-		<meta property="og:image" name="og:image" content="http://<?php echo $_SERVER['SERVER_NAME'];?>/resize/w200/img/head/<?php echo $dbshop->f(head1);?>"/>
+		<meta property="og:image" name="og:image" content="http://<?php echo $_SERVER['SERVER_NAME'];?>/slir/w200/img/head/<?php echo $dbshop->f(head1);?>"/>
 		<meta name="og:title" content="<?php echo $dbshop->f(shopname)?> | <?php echo str_replace('"',"'",$dbshop->f(welcome));?>" />
 		<meta name="og:description" content="<?php echo $dbshop->f(shopname)?> | <?php echo $dbshop->f(welcome)?>" />
 		<meta name="og:site_name" property="og:site_name" content="http://<?php echo $_SERVER['SERVER_NAME'];?>/shop_index.php?shop=<?php echo $dbshop->f(id)?>" />
@@ -1287,7 +1287,7 @@
 														<td align="center">
 															<table width="100%" border="0" cellspacing="0" cellpadding="0">
 																<tr>
-																	<!-- <td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$dbhot->f(product_id)?>" target="_blank"> <img src="<?=($dbhot->f(pic1)!="")?'/resize/w140-h135/img/amulet/'.$dbhot->f(pic1):"images/clear.gif"?>" alt="" width="140" height="135" border="0" /> </a></td> -->
+																	<!-- <td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$dbhot->f(product_id)?>" target="_blank"> <img src="<?=($dbhot->f(pic1)!="")?'/slir/w140-h135/img/amulet/'.$dbhot->f(pic1):"images/clear.gif"?>" alt="" width="140" height="135" border="0" /> </a></td> -->
 																	<td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$dbhot->f(product_id)?>" target="_blank"> <img src="<?=($dbhot->f(pic1)!="")?'/img/amulet/'.$dbhot->f(pic1):"images/clear.gif"?>" alt="" width="140" height="135" border="0" /> </a></td>
 																</tr>
 															</table>
@@ -1592,7 +1592,7 @@
 										<td align="center">
 											<table width="100%" border="0" cellspacing="0" cellpadding="0">
 												<tr>
-													<!-- <td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>" target="_blank"> <img src="<?=($db->f(pic1)!="")?'/resize/w155-h150/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="155" height="150" border="0" /> </a></td> -->
+													<!-- <td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>" target="_blank"> <img src="<?=($db->f(pic1)!="")?'/slir/w155-h150/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="155" height="150" border="0" /> </a></td> -->
 													<td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>" target="_blank"> <img src="<?=($db->f(pic1)!="")?'/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="155" height="150" border="0" /> </a></td>
 												</tr>
 											</table>

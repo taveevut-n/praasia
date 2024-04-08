@@ -60,7 +60,7 @@ include("global_counter.php");
 																		<tr>
 																			<td bgcolor="#000000"><a href="detail_exp.php?exp_id=<?=$dbgeji->f(exp_id)?>">
 																				
-																				<!-- <img src="<?=($dbgeji->f(pic1)!="")?'/resize/w150-h150/img/exp/'.$dbgeji->f(pic1):"images/logodefualt.jpg"?>" alt="" width="150" height="150" border="0" /></a></td> -->
+																				<!-- <img src="<?=($dbgeji->f(pic1)!="")?'/slir/w150-h150/img/exp/'.$dbgeji->f(pic1):"images/logodefualt.jpg"?>" alt="" width="150" height="150" border="0" /></a></td> -->
 																				<img src="<?=($dbgeji->f(pic1)!="")?'/img/exp/'.$dbgeji->f(pic1):"images/logodefualt.jpg"?>" alt="" width="150" height="150" border="0" /></a></td>
 																			</tr>
 																			<tr>

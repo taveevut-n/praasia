@@ -242,28 +242,28 @@ a:active {
 			if($dbimg->f(pic1)!=''){
 		?>
 		<a href="img/amulet/<?=$dbimg->f(pic1)?>">
-			<img src="/resize/w45-h40/img/amulet/<?=$dbimg->f(pic1)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
+			<img src="/slir/w45-h40/img/amulet/<?=$dbimg->f(pic1)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
 		</a>
 		<?php
 			}
 			if($dbimg->f(pic2)!=''){
 		?>
 		<a href="img/amulet/<?=$dbimg->f(pic2)?>">
-			<img src="/resize/w45-h40/img/amulet/<?=$dbimg->f(pic2)?>",data-big="/resize/w298-h285/img/amulet/<?=$dbimg->f(pic2)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
+			<img src="/slir/w45-h40/img/amulet/<?=$dbimg->f(pic2)?>",data-big="/slir/w298-h285/img/amulet/<?=$dbimg->f(pic2)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
 		</a>
 		<?php
 			}
 			if($dbimg->f(pic3)!=''){
 		?>
 		<a href="img/amulet/<?=$dbimg->f(pic3)?>">
-			<img src="/resize/w45-h40/img/amulet/<?=$dbimg->f(pic3)?>",data-big="/resize/w298-h285/img/amulet/<?=$dbimg->f(pic3)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
+			<img src="/slir/w45-h40/img/amulet/<?=$dbimg->f(pic3)?>",data-big="/slir/w298-h285/img/amulet/<?=$dbimg->f(pic3)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
 		</a>    
 		<?php
 			}
 			if($dbimg->f(pic4)!=''){
 		?>
 		<a href="img/amulet/<?=$dbimg->f(pic4)?>">
-			<img src="/resize/w45-h40/img/amulet/<?=$dbimg->f(pic4)?>",data-big="/resize/w298-h285/img/amulet/<?=$dbimg->f(pic4)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
+			<img src="/slir/w45-h40/img/amulet/<?=$dbimg->f(pic4)?>",data-big="/slir/w298-h285/img/amulet/<?=$dbimg->f(pic4)?>" data-link="shop_product.php?product_id=<?=$dbimg->f(product_id)?>"/>
 		</a>
 		<?php
 				}
@@ -568,7 +568,7 @@ a:active {
 				<tr>
 					<td bgcolor="#000000">
 						<a href="shop_product.php?product_id=<?=$db->f(product_id)?>">
-							<img src="<?=($dbhot->f(pic1)!="")?'/resize/w155-h150/img/amulet/'.$dbhot->f(pic1):"images/clear.gif"?>" alt="" width="155" height="150" border="0" />
+							<img src="<?=($dbhot->f(pic1)!="")?'/slir/w155-h150/img/amulet/'.$dbhot->f(pic1):"images/clear.gif"?>" alt="" width="155" height="150" border="0" />
 						</a>
 					</td>
 				</tr>
@@ -875,7 +875,7 @@ a:active {
 				<tr>
 					<td bgcolor="#000000">
 						<a href="shop_product.php?product_id=<?=$db->f(product_id)?>">
-							<img src="<?=($db->f(pic1)!="")?'/resize/w155-h150/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="155" height="150" border="0" />
+							<img src="<?=($db->f(pic1)!="")?'/slir/w155-h150/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="155" height="150" border="0" />
 						</a>
 					</td>
 				</tr>

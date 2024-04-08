@@ -80,7 +80,7 @@ $certficate->next_record();
                 <td height="12"></td>
               </tr>
               <tr>
-                <td><img src="../resize/w107-h152/img/certificate/<?=$certficate->f(cert_pic)?>" /></td>
+                <td><img src="../slir/w107-h152/img/certificate/<?=$certficate->f(cert_pic)?>" /></td>
               </tr>
               <tr>
               	<td height="5"></td>

@@ -254,7 +254,7 @@
 														
 						  ?>                      
                       <tr style="color:#3d2602">
-                        <td align="center"><a href="certificate.php?cert_code=<?=$db->f(cert_code)?>"><img src="../resize/w100-h100/img/certificate/<?=$db->f(pic1)?>" width="60" height="86" border="0" /></a></td>
+                        <td align="center"><a href="certificate.php?cert_code=<?=$db->f(cert_code)?>"><img src="../slir/w100-h100/img/certificate/<?=$db->f(pic1)?>" width="60" height="86" border="0" /></a></td>
                         <td align="center"><?=$db->f(cert_amulet)?><?=$db->f(cert_skin)?><?=$db->f(cert_year)?><?=$db->f(cert_detail)?></td>
                         <td align="center"><?=$db->f(cert_code)?></td>
                         <td align="center">

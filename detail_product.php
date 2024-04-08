@@ -97,19 +97,19 @@ a:active {
               </table></td>
             </tr>
             <tr>
-              <td align="center"><img src="<?=($db->f(pic1)!="")?'resize/w800/upimg/product/'.$db->f(pic1):"images/clear.gif"?>"  border="0" /></td>
+              <td align="center"><img src="<?=($db->f(pic1)!="")?'slir/w800/upimg/product/'.$db->f(pic1):"images/clear.gif"?>"  border="0" /></td>
             </tr>
             <tr>
-              <td align="center"><img src="<?=($db->f(pic2)!="")?'resize/w800/upimg/product/'.$db->f(pic2):"images/clear.gif"?>"  border="0" /></td>
+              <td align="center"><img src="<?=($db->f(pic2)!="")?'slir/w800/upimg/product/'.$db->f(pic2):"images/clear.gif"?>"  border="0" /></td>
             </tr>
             <tr>
-              <td align="center"><img src="<?=($db->f(pic3)!="")?'resize/w800/upimg/product/'.$db->f(pic3):"images/clear.gif"?>"  border="0" /></td>
+              <td align="center"><img src="<?=($db->f(pic3)!="")?'slir/w800/upimg/product/'.$db->f(pic3):"images/clear.gif"?>"  border="0" /></td>
             </tr>
             <tr>
-              <td align="center"><img src="<?=($db->f(pic4)!="")?'resize/w800/upimg/product/'.$db->f(pic4):"images/clear.gif"?>"  border="0" /></td>
+              <td align="center"><img src="<?=($db->f(pic4)!="")?'slir/w800/upimg/product/'.$db->f(pic4):"images/clear.gif"?>"  border="0" /></td>
             </tr>
             <tr>
-              <td align="center"><img src="<?=($db->f(pic5)!="")?'resize/w800/upimg/product/'.$db->f(pic5):"images/clear.gif"?>"  border="0" /></td>
+              <td align="center"><img src="<?=($db->f(pic5)!="")?'slir/w800/upimg/product/'.$db->f(pic5):"images/clear.gif"?>"  border="0" /></td>
             </tr>
           </table>
 		  </td><?php }?>
@@ -133,7 +133,7 @@ a:active {
                         <tr>
                           <td width="149" height="166" valign="top" bgcolor="#FFFFFF"><table width="95%" border="0" align="center" cellpadding="3" cellspacing="0">
                             <tr>
-                              <td align="center"><a href="detail_product.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'resize/w97-h97-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="97" height="97" border="0" /></a></td>
+                              <td align="center"><a href="detail_product.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'slir/w97-h97-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="97" height="97" border="0" /></a></td>
                             </tr>
                             <tr>
                               <td align="left"><span style="color:#000; font-size:11px"><?=$db->f(name_product)?></span></td>
@@ -156,7 +156,7 @@ a:active {
                           <?php if($p_r%5==2){ ?>
                           <td width="147" valign="top" bgcolor="#FFFFFF"><table width="95%" border="0" align="center" cellpadding="3" cellspacing="0">
                             <tr>
-                              <td align="center"><a href="detail_product.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'resize/w97-h97-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="97" height="97" border="0" /></a></td>
+                              <td align="center"><a href="detail_product.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'slir/w97-h97-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="97" height="97" border="0" /></a></td>
                             </tr>
                             <tr>
                               <td align="left"><span style="color:#000; font-size:11px">
@@ -184,7 +184,7 @@ a:active {
                           <?php if($p_r%5==3){ ?>
                           <td width="148" valign="top" bgcolor="#FFFFFF"><table width="95%" border="0" align="center" cellpadding="3" cellspacing="0">
                             <tr>
-                              <td align="center"><a href="detail_product.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'resize/w97-h97-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="97" height="97" border="0" /></a></td>
+                              <td align="center"><a href="detail_product.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'slir/w97-h97-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="97" height="97" border="0" /></a></td>
                             </tr>
                             <tr>
                               <td align="left"><span style="color:#000; font-size:11px">
@@ -211,7 +211,7 @@ a:active {
                           <?php if($p_r%5==4){ ?>
                           <td width="148" valign="top" bgcolor="#FFFFFF"><table width="95%" border="0" align="center" cellpadding="3" cellspacing="0">
                             <tr>
-                              <td align="center"><a href="detail_product.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'resize/w97-h97-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="97" height="97" border="0" /></a></td>
+                              <td align="center"><a href="detail_product.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'slir/w97-h97-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="97" height="97" border="0" /></a></td>
 
                             </tr>
                             <tr>
@@ -239,7 +239,7 @@ a:active {
                           <?php if($p_r%5==0){ ?>
                           <td width="150" valign="top" bgcolor="#FFFFFF"><table width="95%" border="0" align="center" cellpadding="3" cellspacing="0">
                             <tr>
-                              <td align="center"><a href="detail_product.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'resize/w97-h97-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="97" height="97" border="0" /></a></td>
+                              <td align="center"><a href="detail_product.php?id_product=<?=$db->f(id_product)?>" target="_parent" style="text-decoration:none"><img src="<?=($db->f(pic1)!="")?'slir/w97-h97-c1:1/upimg/product/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="97" height="97" border="0" /></a></td>
                             </tr>
                             <tr>
                               <td align="left"><span style="color:#000; font-size:11px">

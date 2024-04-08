@@ -152,7 +152,7 @@
 												<tr>
 													<td bgcolor="#000000">
 														<a href="shop_product.php?product_id=<?=$db->f(product_id)?>" target="_blank">
-														<img src="<?=($db->f(pic1)!="")?'/resize/w155-h150/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="152" height="147" border="0" />
+														<img src="<?=($db->f(pic1)!="")?'/slir/w155-h150/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="152" height="147" border="0" />
 														</a>
 													</td>
 												</tr>

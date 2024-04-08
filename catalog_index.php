@@ -131,7 +131,7 @@
 										<table width="90%" border="0" cellspacing="0" cellpadding="0">
 											<tr>
 												<td bgcolor="#000000"><a href="shop_index.php?shop=<?=$dbshop->f(id)?>">
-												<!-- <img src="<?=($dbshop->f(head2)!="")?'/resize/w120-h120/img/head/'.$dbshop->f(head2):"images/logodefualt.jpg"?>" alt="" width="118" height="120" border="0" /></a> -->
+												<!-- <img src="<?=($dbshop->f(head2)!="")?'/slir/w120-h120/img/head/'.$dbshop->f(head2):"images/logodefualt.jpg"?>" alt="" width="118" height="120" border="0" /></a> -->
 												<img src="<?=($dbshop->f(head2)!="")?'/img/head/'.$dbshop->f(head2):"images/logodefualt.jpg"?>" alt="" width="118" height="120" border="0" /></a>
 											</td>
 											</tr>
@@ -270,7 +270,7 @@
 									<td align="center">
 										<table width="90%" border="0" cellspacing="0" cellpadding="0">
 											<tr>
-												<!-- <td bgcolor="#000000"><a href="shop_index.php?shop=<?=$dbshop->f(id)?>"><img src="<?=($dbshop->f(head2)!="")?'/resize/w120-h120/img/head/'.$dbshop->f(head2):"images/logodefualt.jpg"?>" alt="" width="120" height="120" border="0" /></a></td> -->
+												<!-- <td bgcolor="#000000"><a href="shop_index.php?shop=<?=$dbshop->f(id)?>"><img src="<?=($dbshop->f(head2)!="")?'/slir/w120-h120/img/head/'.$dbshop->f(head2):"images/logodefualt.jpg"?>" alt="" width="120" height="120" border="0" /></a></td> -->
 												<td bgcolor="#000000"><a href="shop_index.php?shop=<?=$dbshop->f(id)?>"><img src="<?=($dbshop->f(head2)!="")?'/img/head/'.$dbshop->f(head2):"images/logodefualt.jpg"?>" alt="" width="120" height="120" border="0" /></a></td>
 											</tr>
 										</table>

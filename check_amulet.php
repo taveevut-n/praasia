@@ -51,7 +51,7 @@
 																														<tr>
 																																<td bgcolor="#000000">
 																																		<a href="shop_product.php?product_id=<?=$db->f(product_id)?>">
-																																		<img src="<?=($db->f(amulet_pic)!="")?'/resize/w152-h150/img/checkamulet/'.$db->f(amulet_pic):"images/clear.gif"?>" alt="" width="152" height="150" border="0" />
+																																		<img src="<?=($db->f(amulet_pic)!="")?'/slir/w152-h150/img/checkamulet/'.$db->f(amulet_pic):"images/clear.gif"?>" alt="" width="152" height="150" border="0" />
 																																		</a>
 																																</td>
 																														</tr>

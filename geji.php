@@ -54,7 +54,7 @@
 																																<td align="center">
 																																		<table width="90%" border="0" cellspacing="0" cellpadding="0">
 																																				<tr>
-																																						<!-- <td bgcolor="#000000"><a href="detail_geji.php?geji_id=<?=$dbgeji->f(geji_id)?>"><img src="<?=($dbgeji->f(pic1)!="")?'/resize/w150-h150/img/geji/'.$dbgeji->f(pic1):"images/logodefualt.jpg"?>" alt="" width="150" height="150" border="0" /></a></td> -->
+																																						<!-- <td bgcolor="#000000"><a href="detail_geji.php?geji_id=<?=$dbgeji->f(geji_id)?>"><img src="<?=($dbgeji->f(pic1)!="")?'/slir/w150-h150/img/geji/'.$dbgeji->f(pic1):"images/logodefualt.jpg"?>" alt="" width="150" height="150" border="0" /></a></td> -->
 																																						<td bgcolor="#000000"><a href="detail_geji.php?geji_id=<?=$dbgeji->f(geji_id)?>"><img src="<?=($dbgeji->f(pic1)!="")?'/img/geji/'.$dbgeji->f(pic1):"images/logodefualt.jpg"?>" alt="" width="150" height="150" border="0" /></a></td>
 																																				</tr>
 																																				<tr>

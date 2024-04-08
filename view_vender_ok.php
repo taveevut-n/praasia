@@ -246,19 +246,19 @@ a:active {
                                     	<table>
                                         	<tr>
                                             	<td>
-                                                	<a href="../img/vender_pic/<?=$db->f(pic1)?>" target="_blank"><img src="<?=($db->f(pic1)!="")?'/resize/h60/img/vender_pic/'.$db->f(pic1):"../images/clear.gif"?>" /></a>
+                                                	<a href="../img/vender_pic/<?=$db->f(pic1)?>" target="_blank"><img src="<?=($db->f(pic1)!="")?'/slir/h60/img/vender_pic/'.$db->f(pic1):"../images/clear.gif"?>" /></a>
                                                 </td>
                                             	<td>
-                                                	<a href="../img/vender_pic/<?=$db->f(pic2)?>" target="_blank"><img src="<?=($db->f(pic2)!="")?'/resize/h60/img/vender_pic/'.$db->f(pic2):"../images/clear.gif"?>" /></a>
+                                                	<a href="../img/vender_pic/<?=$db->f(pic2)?>" target="_blank"><img src="<?=($db->f(pic2)!="")?'/slir/h60/img/vender_pic/'.$db->f(pic2):"../images/clear.gif"?>" /></a>
                                                 </td>
                                             	<td>
-                                                	<a href="../img/vender_pic/<?=$db->f(pic3)?>" target="_blank"><img src="<?=($db->f(pic3)!="")?'/resize/h60/img/vender_pic/'.$db->f(pic3):"../images/clear.gif"?>" /></a>
+                                                	<a href="../img/vender_pic/<?=$db->f(pic3)?>" target="_blank"><img src="<?=($db->f(pic3)!="")?'/slir/h60/img/vender_pic/'.$db->f(pic3):"../images/clear.gif"?>" /></a>
                                                 </td>
                                             	<td>
-                                                	<a href="../img/vender_pic/<?=$db->f(pic4)?>" target="_blank"><img src="<?=($db->f(pic4)!="")?'/resize/h60/img/vender_pic/'.$db->f(pic4):"../images/clear.gif"?>" /></a>
+                                                	<a href="../img/vender_pic/<?=$db->f(pic4)?>" target="_blank"><img src="<?=($db->f(pic4)!="")?'/slir/h60/img/vender_pic/'.$db->f(pic4):"../images/clear.gif"?>" /></a>
                                                 </td>
                                             	<td>
-                                                	<a href="../img/vender_pic/<?=$db->f(pic5)?>" target="_blank"><img src="<?=($db->f(pic5)!="")?'/resize/h60/img/vender_pic/'.$db->f(pic5):"../images/clear.gif"?>" /></a>
+                                                	<a href="../img/vender_pic/<?=$db->f(pic5)?>" target="_blank"><img src="<?=($db->f(pic5)!="")?'/slir/h60/img/vender_pic/'.$db->f(pic5):"../images/clear.gif"?>" /></a>
                                                 </td>                                                                                                                                                
                                             </tr>
                                         </table>

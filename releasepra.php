@@ -24,7 +24,7 @@
                     <td align="center">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                        <td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"><img src="<?=($db->f(pic1)!="")?'/resize/w155-h150/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="155" height="150" border="0" /></a></td>
+                        <td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"><img src="<?=($db->f(pic1)!="")?'/slir/w155-h150/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="155" height="150" border="0" /></a></td>
                         </tr>
                     </table></td>
                   </tr>

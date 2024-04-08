@@ -750,7 +750,7 @@
 							</td>
 							<td align="center">
 								<a href="http://www.praasia.com/shop_product.php?product_id=<?=$db->f(product_id)?>" target="_blank">
-								<img src="/resize/w90-h90/img/amulet/<?=$db->f(pic1)?>" width="90" height="90" />
+								<img src="/slir/w90-h90/img/amulet/<?=$db->f(pic1)?>" width="90" height="90" />
 								</a>
 							</td>
 							<td align="left"><?=$db->f(name)?></td>
