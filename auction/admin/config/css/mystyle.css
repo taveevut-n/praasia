@@ -1,0 +1,201 @@
+body{
+	font-family: helvetica,thonburi,tahoma;
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
+	background:black;
+}
+#header{
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+}
+#container{
+	background:#0C0705;
+}
+.box_content{
+	background:#eee;
+	width:1000px;
+	margin:0 auto;
+}
+#footer{
+	text-align: center;
+	line-height: 29px;
+	width: 1000px;
+	margin: 0 auto;
+	background: #0E474D;
+	color: #eee;
+	font-size: 13px;
+}
+
+input[type="radio"],input[type="checkbox"]{
+	cursor: pointer;
+}
+
+.head_contain{
+	background: #4A1701;
+	line-height: 24px;
+}
+.text_yellpw{
+	color: #FFCC00;
+}
+.condition-tdtext td{
+	color:#202020;
+	line-height: 24px;
+	font-size: 13px;
+}
+.condition_tb_textjustify td{
+	color:#CBC7C7;
+	line-height: 24px;
+	font-size: 13px;
+}
+.btn{
+	padding: 3px 12px 4px 12px;
+	font-weight: bold;
+	color: #eee;
+	font-size: 13px;
+	font-family: sans-serif;
+	display: inline-block;
+	border-radius: 2px;
+}
+.btn:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+.btn:active{
+	opacity: 0.7;
+	cursor: pointer;
+}
+.btn_Default{
+	background-image: -webkit-linear-gradient(top,#9C9595 0,#312F2F 100%);
+	background-image: linear-gradient(to bottom,#9C9595 0,#312F2F 100%);
+	border: 1px rgb(112, 107, 107) solid;
+}
+.btn_Delete{
+	background-image: -webkit-linear-gradient(top,#FA5142 0,#7A231C 100%);
+	background-image: linear-gradient(to bottom,#FA5142 0,#7A231C 100%);
+	border: 1px rgb(190, 125, 125) solid;
+}
+.btn_Edit{
+	background-image: -webkit-linear-gradient(top,#6974EE 0,#162B58 100%);
+	background-image: linear-gradient(to bottom,#6974EE 0,#162B58 100%);
+	border: 1px #33559C solid;
+}
+.btn_View{
+	background-image: -webkit-linear-gradient(top,#B5B6C0 0,#464A52 100%);
+	background-image: linear-gradient(to bottom,#B5B6C0 0,#464A52 100%);
+	border: 1px rgb(153, 150, 150) solid;
+}
+.icon_container{
+	position: relative;
+	display: inline;
+	overflow: hidden;
+}
+.panal_language{
+	position: absolute;
+	top : 0px;
+	right: 0px;
+}
+.panal_language table tr td{
+	color: #eee;
+	font-size: 12px;
+	font-weight: bold;
+	padding-right: 10px;
+}
+.panal_language table tr td a{
+	color: #eee;
+	text-decoration: none;
+}
+.panal_language table tr td a:hover{
+	color: #eee;
+	text-decoration: underline;
+}
+.box_content_index{
+	display: block;
+}
+.index-title{
+	font-weight: bold;
+	font-size: 13px;
+}
+.title{
+	font-weight: bold;
+	background: #B3B0B0;
+}
+.text_title{
+	font-size: 13px;
+	font-weight: bold;
+	color: #3F3838;
+	margin-left: 9px;
+}
+.left_menu{
+	background: rgb(80, 71, 71);
+	border-bottom: 1px rgb(238, 85, 14) solid;
+}
+.left_menu div{
+	font-size: 13px;
+	font-weight: bold;
+	color: #eee;
+	padding-left: 16px;
+	padding-right: 16px;
+	line-height: 32px;
+}
+.left_menu div:hover{
+	background: rgb(151, 89, 60);
+	cursor: pointer;
+}
+.tb_listdata{
+	border-collapse: collapse;
+	}
+.tb_listdata td{
+	padding-left: 4px;
+	padding-right: 4px;
+	border-bottom: 1px rgb(219, 215, 215) solid;
+	border-left: 1px rgb(168, 163, 163) solid;
+	background: rgb(240, 238, 238);
+}
+.tab_container{
+	background: #fff;
+	width: 800px;
+	margin: 0 auto;
+	border: 1px rgb(184, 184, 184) solid;
+}
+.tab_container .tab_toptext{
+	background: linear-gradient(to bottom,#C5C3C3 0,#6E6665 100%);
+}
+.tab_container .tab_toptext .tb_toptext{
+	border-collapse: collapse;
+	font-family: monospace;
+	font-size: 12px;
+	font-weight: bold;
+}
+.tab_container .tab_toptext .tb_toptext td{
+	padding: 5px 11px;
+	border-right: 1px rgb(102, 67, 67) solid;
+}
+.tab_container .tab_toptext .tb_toptext td:hover{
+	background: rgb(146, 146, 163);
+	cursor: pointer;
+}
+.tab_container .tab_toptext .tb_toptext td.active{
+	background: rgb(146, 146, 163);
+	color: rgb(233, 231, 231);
+}
+.tab_container .tab_content{
+	background: linear-gradient(to bottom,rgb(146, 146, 163) 0,#E6DEDD 100%);
+}
+.tab_container .tab_content .tab_contenttext{
+	display: none;
+}
+.title_table{
+	background: rgb(179, 167, 167);
+	font-weight: bold;
+}
+.catalogn_table{
+	border-collapse: collapse;
+}
+.catalogn_table td{
+	color: #545252;
+	line-height: 24px;
+	font-size: 13px;
+}
