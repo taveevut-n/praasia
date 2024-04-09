@@ -75,16 +75,16 @@ body {
                   	<td>
                     <table width="100%" border="0" cellspacing="0" cellpadding="5">
                       <tr>
-                        <td align="center"><img src="<?=($dbproduct->f(pic1)!="")?"/resize/w900/jewelry/upimg/product/".$dbproduct->f(pic1):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
+                        <td align="center"><img src="<?=($dbproduct->f(pic1)!="")?"/slir/w900/jewelry/upimg/product/".$dbproduct->f(pic1):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
                       </tr>
                       <tr>
-                        <td align="center"><img src="<?=($dbproduct->f(pic2)!="")?"/resize/w900/jewelry/upimg/product/".$dbproduct->f(pic2):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
+                        <td align="center"><img src="<?=($dbproduct->f(pic2)!="")?"/slir/w900/jewelry/upimg/product/".$dbproduct->f(pic2):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
                       </tr>
                       <tr>
-                        <td align="center"><img src="<?=($dbproduct->f(pic3)!="")?"/resize/w900/jewelry/upimg/product/".$dbproduct->f(pic3):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
+                        <td align="center"><img src="<?=($dbproduct->f(pic3)!="")?"/slir/w900/jewelry/upimg/product/".$dbproduct->f(pic3):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
                       </tr>
                       <tr>
-                        <td align="center"><img src="<?=($dbproduct->f(pic4)!="")?"/resize/w900/jewelry/upimg/product/".$dbproduct->f(pic4):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
+                        <td align="center"><img src="<?=($dbproduct->f(pic4)!="")?"/slir/w900/jewelry/upimg/product/".$dbproduct->f(pic4):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
                       </tr>
                     </table>
                     </td>

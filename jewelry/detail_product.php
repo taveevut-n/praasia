@@ -75,16 +75,16 @@ body {
                   	<td>
                     <table width="100%" border="0" cellspacing="0" cellpadding="5">
                       <tr>
-                        <td align="center"><img src="<?=($dbproduct->f(pic1)!="")?"/resize/w900/jewelry/upimg/product/".$dbproduct->f(pic1):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
+                        <td align="center"><img src="<?=($dbproduct->f(pic1)!="")?"/slir/w900/jewelry/upimg/product/".$dbproduct->f(pic1):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
                       </tr>
                       <tr>
-                        <td align="center"><img src="<?=($dbproduct->f(pic2)!="")?"/resize/w900/jewelry/upimg/product/".$dbproduct->f(pic2):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
+                        <td align="center"><img src="<?=($dbproduct->f(pic2)!="")?"/slir/w900/jewelry/upimg/product/".$dbproduct->f(pic2):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
                       </tr>
                       <tr>
-                        <td align="center"><img src="<?=($dbproduct->f(pic3)!="")?"/resize/w900/jewelry/upimg/product/".$dbproduct->f(pic3):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
+                        <td align="center"><img src="<?=($dbproduct->f(pic3)!="")?"/slir/w900/jewelry/upimg/product/".$dbproduct->f(pic3):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
                       </tr>
                       <tr>
-                        <td align="center"><img src="<?=($dbproduct->f(pic4)!="")?"/resize/w900/jewelry/upimg/product/".$dbproduct->f(pic4):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
+                        <td align="center"><img src="<?=($dbproduct->f(pic4)!="")?"/slir/w900/jewelry/upimg/product/".$dbproduct->f(pic4):"images/clear.gif"?>" alt="<?=$dbproduct->f(name)?>" /></td>
                       </tr>
                     </table>
                     </td>
@@ -105,7 +105,7 @@ body {
         while ($dbhot->next_record()) { ?>        
         <table width="160" border="0" cellspacing="0" cellpadding="0" style="float:left; margin:10px">
           <tr>
-            <td height="120" align="center" bgcolor="#333333" style="border:1px solid #666"><a href="detail_product.php?id=<?=$dbhot->f(id)?>"><img src="<?=($dbhot->f(pic1)!="")?'/resize/w150-h120/jewelry/upimg/product/'.$dbhot->f(pic1):"images/clear.gif"?>" alt=""  border="0" /></a></td>
+            <td height="120" align="center" bgcolor="#333333" style="border:1px solid #666"><a href="detail_product.php?id=<?=$dbhot->f(id)?>"><img src="<?=($dbhot->f(pic1)!="")?'/slir/w150-h120/jewelry/upimg/product/'.$dbhot->f(pic1):"images/clear.gif"?>" alt=""  border="0" /></a></td>
           </tr>
         </table>
 		<?php } ?>        

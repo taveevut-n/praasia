@@ -15,7 +15,7 @@
     while ($row = mysql_fetch_array($q)) {
         $ext = strtolower(array_pop(explode('.',$row["head1"])));
         if( $ext == "jpg" || $ext == "jpeg" || $ext == "png" || $ext == "gif" ){
-            $row['head1'] = "http://".$_SERVER['SERVER_NAME']."/resize/w120-h120-c120:120/img/head/".$row['head1'];
+            $row['head1'] = "http://".$_SERVER['SERVER_NAME']."/slir/w120-h120-c120:120/img/head/".$row['head1'];
         }else{
             $row['head1'] = "http://".$_SERVER['SERVER_NAME']."/img/head/default.png";
         }

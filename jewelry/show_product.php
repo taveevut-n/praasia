@@ -160,7 +160,7 @@ body {
                     while ($dbproduct->next_record()) { ?>        
                     <table width="450" border="0" cellspacing="0" cellpadding="0" style="float:left; margin-left:10px; border-bottom:1px dotted #DDDDDD">
                       <tr>
-                        <td width="130" align="center" bgcolor="#FFFFFF"><a href="detail_product.php?id=<?=$dbproduct->f(id)?>"><img src="<?=($dbproduct->f(pic1)!="")?'/resize/w110-h110-c1:1/jewelry/upimg/product/'.$dbproduct->f(pic1):"images/clear.gif"?>" alt=""  border="0" /></a></td>
+                        <td width="130" align="center" bgcolor="#FFFFFF"><a href="detail_product.php?id=<?=$dbproduct->f(id)?>"><img src="<?=($dbproduct->f(pic1)!="")?'/slir/w110-h110-c1:1/jewelry/upimg/product/'.$dbproduct->f(pic1):"images/clear.gif"?>" alt=""  border="0" /></a></td>
                         <td valign="top" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="3">
                           <tr>
                             <td>

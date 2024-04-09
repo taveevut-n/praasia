@@ -8,9 +8,9 @@
     if($q){
         $rs = mysql_fetch_array($q);
         if($rs['pic1'] != ''){
-            $pic1 = "http://".$_SERVER['SERVER_NAME']."/resize/w500-h500-c500:500/img/amulet/".$rs['pic1'];
+            $pic1 = "http://".$_SERVER['SERVER_NAME']."/slir/w500-h500-c500:500/img/amulet/".$rs['pic1'];
         }else{
-            $pic1 = "http://".$_SERVER['SERVER_NAME']."/resize/w500-h500-c500:500/img/amulet/default.png";
+            $pic1 = "http://".$_SERVER['SERVER_NAME']."/slir/w500-h500-c500:500/img/amulet/default.png";
         }
     }
     $items = array(
