@@ -287,8 +287,7 @@
 													<td>
 														<select name="catalog" id="catalog" style="width:300px;">
 															<option value="0">
-																---เลือกหมวดหมู่สำหรับร้านค้าตนเอง / 选本店的产品分类
----
+																---เลือกหมวดหมู่สำหรับร้านค้าตนเอง / 选本店的产品分类---
 															</option>
 															<?php 
 																$q="SELECT * FROM catalog_shop WHERE shop_id = '".$_SESSION['adminshop_id']."' ";
