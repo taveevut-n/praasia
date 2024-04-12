@@ -61,7 +61,6 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-
 $baseUrl = 'http://www.praasia.com/file/'.$_SESSION['adminshop_id'].'/';
 
 /*
@@ -335,5 +334,3 @@ include_once "plugins/zip/plugin.php";
 $config['plugin_imageresize']['smallThumb'] = '90x90';
 $config['plugin_imageresize']['mediumThumb'] = '120x120';
 $config['plugin_imageresize']['largeThumb'] = '180x180';
-ob_start();
-?>

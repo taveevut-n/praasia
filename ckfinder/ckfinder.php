@@ -12,5 +12,3 @@
  */
 
 require_once 'core/ckfinder_php5.php' ;
-ob_start();
-?>
