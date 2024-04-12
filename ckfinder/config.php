@@ -337,4 +337,3 @@ $config['plugin_imageresize']['mediumThumb'] = '120x120';
 $config['plugin_imageresize']['largeThumb'] = '180x180';
 ob_start();
 ?>
-<script></script>
