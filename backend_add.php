@@ -534,10 +534,10 @@
 									</tr>
 									<script>
 										CKEDITOR.replace( 'detail', {
-											filebrowserBrowseUrl : 'ckfinder/ckfinder.html',
-											filebrowserImageBrowseUrl : 'ckfinder/ckfinder.html?type=Images',
-											filebrowserFlashBrowseUrl : 'ckfinder/ckfinder.html?type=Flash',
-											filebrowserFlashUploadUrl : 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+											filebrowserBrowseUrl : 'tool/ckfinder/ckfinder.html',
+											filebrowserImageBrowseUrl : 'tool/ckfinder/ckfinder.html?type=Images',
+											filebrowserFlashBrowseUrl : 'tool/ckfinder/ckfinder.html?type=Flash',
+											filebrowserFlashUploadUrl : 'tool/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
 										});
 									</script>
 									<tr>
