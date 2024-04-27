@@ -1,0 +1,1455 @@
+<?php 
+	include("global.php"); 
+	include("global_counter.php");
+?>
+<?php set_page($s_page,$e_page=60); //นำส่วนนี้ิไว้ด้านบน ?>
+<?php
+	if ($_GET['shop']) {
+	$_SESSION['shop_id']=$_GET['shop'];	
+	$shop_id = $_SESSION['shop_id'];
+	}
+	$q="UPDATE `member` SET `view_num` = `view_num`+3 WHERE `id` ='".$_SESSION['shop_id']."' ";
+	$db->query($q);
+	$q="SELECT * FROM `member` WHERE id='".$_SESSION['shop_id']."' ";
+	$dbshop= new nDB();	
+	$dbshop->query($q);
+	$dbshop->next_record();
+	$arrival = $dbshop->f(date_add);
+	$timestamp = strtotime($dbshop->f(shop_date));
+	$q="SELECT * FROM `product` WHERE shop_id ='".$_SESSION['shop_id']."' ";
+	$dbproduct= new nDB();	
+	$dbproduct->query($q);
+	$dbproduct->next_record();
+	$num_rows = $dbproduct->num_rows();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script language="javascript" type="text/javascript" src="swfobject.js" ></script>
+<head>
+<title>ร้าน
+<?=$dbshop->f(shopname)?>
+| ศูนย์รวพระเครื่องเมืองไทย  合艾佛牌网</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="favicon" href="favicon.ico" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/style_top.css">
+
+<!--jquery ui Local-->
+<link rel="stylesheet" href="func/jquery-ui-1.10.3/themes/base/jquery-ui.css" />
+<script src="func/jquery-ui-1.10.3/jquery-1.9.1.js"></script>
+<script src="func/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+<script src="func/jquery-ui-1.10.3/jquery.transit.min.js"></script>
+
+<!--CKEditor-->
+<script src="chatbox_editor/ckeditor/ckeditor.js"></script>
+
+<!--Iswallows Loading-->
+<script src="http://iswallows.com/func/loading/loading.js"></script>
+
+<!-- Lightbox -->
+<link rel="stylesheet" href="colorbox.css"/>
+<script src="jquery.colorbox.js"></script>
+
+<!-- load Galleria -->
+<script src="galleria/galleria-1.2.9.min.js"></script>
+<?php include("index.css"); ?>
+<style type="text/css">
+body {
+	background-color: #000;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+body, td, th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+	color: #000;
+}
+</style>
+<style>
+/* Demo styles */
+
+html, body {;
+	margin: 0;
+}
+body {
+	border-top: 4px solid #000;
+}
+.content {
+	color: #777;
+	font: 12px/1.4 "helvetica neue", arial, sans-serif;
+	width: 450px;
+	background-color: #000
+}
+h1 {
+	font-size: 12px;
+	font-weight: normal;
+	color: #ddd;
+	margin: 0;
+}
+a {
+	color: #22BCB9;
+	text-decoration: none;
+}
+.cred {
+	font-size: 11px;
+}
+/* This rule is read by Galleria to define the gallery height: */
+#galleria {
+	height: 355px
+}
+</style>
+<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div style="position:fixed; z-index:2; bottom:0px; width:100%; background:#663a08 url(images/bg_login.jpg) no-repeat center;">
+  <?php
+		if( $_SESSION['adminshop_id'] == '' || !isset($_SESSION['adminshop_id']) ){
+	?>
+  <form action="chk_login.php" method="post" name="REG" target="_self" id="REG">
+    <table width="1000px" height="40px" align="center" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="225"><input type="text" name="username" class="buddy_txt" placeholder="username" style="width:200px" /></td>
+        <td width="212"><input type="password" name="password" class="buddy_txt" placeholder="password" style="width:200px" /></td>
+        <td width="231" style="white-space:nowrap;"><input name="remember" id="remember" type="checkbox"/>
+          <label for="remember" style="color:#fc0;"> จำการเข้าสู่ระบบ / 记住密码 </label></td>
+        <td width="332"><input name="Login" type="submit" id="Login" value="เข้าสู่ระบบ / 登录" />
+          <input name="submit2" type="submit" id="submit2" value="ลืมรหัสผ่าน / 忘记密码" /></td>
+      </tr>
+    </table>
+  </form>
+  <?php
+		}else{
+			$q="SELECT * FROM `member` WHERE id = '".$_SESSION['adminshop_id']."' ";
+			$dbshopbar= new nDB();
+			$dbshopbar->query($q);
+			$dbshopbar->next_record();
+	?>
+  <table width="1000px" height="40px" style="color:#fc0;" align="center" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td> ยินดีต้อนรับคุณ /欢迎光临 :
+        <?=$dbshopbar->f(name)?></td>
+      <td><a href="backend.php" style="color:#fc0; font-size:14px;"> ระบบจัดการร้านค้า / 商店系统编辑区 </a></td>
+      <td style="white-space:nowrap;"><a href="shop_index.php?shop=<?=$dbshopbar->f(id)?>" style="color:#fc0; font-size:14px;">เข้าสู่หน้าร้านค้า / 进入首页商店</a></td>
+      <td><a href="logout.php" style="color:#fc0">ออกจากระบบ / 退出系统</a></td>
+    </tr>
+  </table>
+  <?php
+		}
+	?>
+</div>
+<!-- Save for Web Slices (???????.jpg) -->
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
+  <tr>
+    <td><table width="1000" border="0" cellpadding="0" cellspacing="0">
+        <?php $chk=substr($dbshop->f(head1),-3); ?>
+        <?php if($chk=="jpg" || $chk=="gif" or $chk=="png"){ ?>
+        <tr>
+          <td colspan="7" align="left" valign="top" height="255"><img src="img/head/<?=$dbshop->f(head1)?>" width="1000" height="350"></td>
+        </tr>
+        <?php } ?>
+        <?php if($chk=="swf"){ 
+							?>
+        <tr>
+          <td colspan="8" align="left" valign="top"><object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="255">
+              <param name="movie" value="img/head/<?=$dbshop->f(head1)?>" />
+              <param name="quality" value="high" />
+              <param name="wmode" value="opaque" />
+              <param name="swfversion" value="8.0.35.0" />
+              <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don't want users to see the prompt. -->
+              <param name="expressinstall" value="../Scripts/expressInstall.swf" />
+              <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. --> 
+              <!--[if !IE]>-->
+              <object type="application/x-shockwave-flash" data="img/head/<?=$dbshop->f(head1)?>" width="1000" height="255">
+                <!--<![endif]-->
+                <param name="quality" value="high" />
+                <param name="wmode" value="opaque" />
+                <param name="swfversion" value="8.0.35.0" />
+                <param name="expressinstall" value="../Scripts/expressInstall.swf" />
+                <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+                <div>
+                  <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+                  <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+                </div>
+                <!--[if !IE]>-->
+              </object>
+              <!--<![endif]-->
+            </object></td>
+        </tr>
+        <?php } ?>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="3"></td>
+  </tr>
+  <tr>
+    <td height="62" style="background:url(images/shopmenu.jpg) no-repeat"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="22%" align="center"><a href="index.php"><img src="images/shop_but_home.png" width="174" height="40" /></a></td>
+          <td width="18%" align="center"><a href="shop_index.php?shop=<?=$dbshop->f(id)?>"><img src="images/shop_but_shop.png" width="177" height="40" /></a></td>
+          <td width="17%">&nbsp;</td>
+          <td width="14%"><a href="show_product.php?shop=<?=$_SESSION['shop_id']?>"><img src="images/shop_but_product.png" width="138" height="40" /></a></td>
+          <td width="29%"><table width="271" border="0" cellspacing="0" cellpadding="3">
+              <form action="show_search.php" method="post" name="search" target="_parent" id="search">
+                <tr>
+                  <td width="194" align="right"><span style="color:#FC0; font-weight:bold">ค้นหาพระเครื่อง <br />
+                    / 搜索聖物:</span></td>
+                  <td width="105" align="center"><input name="q" id="q" size="13" /></td>
+                  <td width="63" align="center"><input name="search" type="submit" id="search" value="search" /></td>
+                </tr>
+              </form>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="488" valign="top" style="background:url(images/shopindex.jpg) no-repeat; padding-top:20px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="36%" valign="top" style="padding-left:24px; padding-top:15px"><table height="183" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td valign="top" style="background:url(images/shop_bgtag.png)" height="185"><table width="100%" border="0" cellspacing="0" cellpadding="3">
+                    <tr>
+                      <td height="28" colspan="3" style="padding-left:110px; padding-top:10px; color:#7b3110; font-size:14px; "> :
+                        <?=$dbshop->f(shopname)?></td>
+                    </tr>
+                    <tr>
+                      <td height="140" valign="top"><div style="color:#000; overflow-y:auto; overflow-x:hidden; height:120px; width:327px">
+                          <table width="100%" cellpadding="2" cellspacing="0">
+                            <tr>
+                              <td width="42%"> ชื่อร้านค้า / 店鋪 
+                              <? if ($dbshop->f(confirmed)=='1') { ?>
+                              <img src="images/confirmedshop.png" alt="ร้านนี้ยืนยันสถานะเรียบร้อยแล้ว" width="31" height="17" />
+							  <? } ?>
+                              </td>
+                              <td> : </td>
+                              <td width="58%"><?=$dbshop->f(shopname)?> </td>
+                            </tr>
+                            <tr>
+                              <td> ชื่อเจ้าของร้าน / 店主名稱 </td>
+                              <td> : </td>
+                              <td><?=$dbshop->f(name)?></td>
+                            </tr>
+                            <tr>
+                              <td valign="top"> ที่อยู่ / 地址 </td>
+                              <td> : </td>
+                              <td><?=str_replace("</p>","</div>",str_replace("<p>","<div>",$dbshop->f(address)))?></td>
+                            </tr>
+                            <tr>
+                              <td> เบอร์โทรติดต่อ / 電話 </td>
+                              <td> : </td>
+                              <td><?=$dbshop->f(tel)?>
+                                <?=$dbshop->f(mobile)?></td>
+                            </tr>
+                            <tr>
+                              <td> E-mail </td>
+                              <td> : </td>
+                              <td><?=$dbshop->f(email)?></td>
+                            </tr>
+                          </table>
+                        </div></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="10" align="center"></td>
+              </tr>
+              <tr>
+                <td valign="top"><style>
+	.shoppm_container {
+		position:relative;
+		width:340px;
+		-webkit-box-shadow: rgba(0,0,0,0.5) 0px 0px 5px;
+		-moz-box-shadow: rgba(0,0,0,0.5) 0px 0px 5px;
+		box-shadow: rgba(0,0,0,0.5) 0px 0px 5px;
+	}
+	.shoppm_title {
+		height:25px;
+		text-align:center;
+		text-shadow: -1px -1px #444444;
+		color:#f5f5f5;
+		background-color:#671f10;
+		-webkit-box-shadow: inset rgba(0,0,0,0.1) 0px -5px 10px;
+		-moz-box-shadow: inset rgba(0,0,0,0.1) 0px -5px 10px;
+		box-shadow: inset rgba(0,0,0,0.1) 0px -5px 10px;
+	}
+	.shoppm_textarea {
+		padding:5px;
+		margin:0px;
+		width:100%;
+		height:125px;
+		border:0px solid #ffffff;
+		resize:none;
+		outline:none;
+		box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+	}
+	.shoppm_text {
+		padding:5px;
+		margin:0px;
+		width:100%;
+		height:24px;
+		border:0px solid #ffffff;
+		outline:none;
+		box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+	}
+	.shoppmleave_submit {
+		margin:0px;
+		padding:5px;
+		padding-left:10px;
+		padding-right:10px;
+		text-align:center;
+		text-shadow: -1px -1px #444444;
+		white-space:nowrap;
+		font-family:Tahoma;
+		font-size:12px;
+		font-weight:bold;
+		color:#ffffff;
+		background-color:#0098ce;
+		border:0px solid #e1e1e1;
+		-webkit-box-shadow: inset rgba(0,0,0,0.1) 0px -5px 10px;
+		-moz-box-shadow: inset rgba(0,0,0,0.1) 0px -5px 10px;
+		box-shadow: inset rgba(0,0,0,0.1) 0px -5px 10px;
+		outline:none;
+		cursor:pointer;
+		transition:all 0.3s ease 0s;
+	}
+	.shoppmleave_submit:hover {
+		background-color:#00a8db;
+	}
+	.shoppm_submit {
+		padding:5px;
+		margin:0px;
+		width:100%;
+		height:30px;
+		text-shadow: 1px 1px #ffffff;
+		font-weight:bold;
+		color:#444444;
+		background-color:#f5f5f5;
+		border:0px solid #ffffff;
+		outline:none;
+		cursor:pointer;
+		-webkit-box-shadow: inset rgba(0,0,0,0.1) 0px -5px 10px;
+		-moz-box-shadow: inset rgba(0,0,0,0.1) 0px -5px 10px;
+		box-shadow: inset rgba(0,0,0,0.1) 0px -5px 10px;
+		box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		transition:all 0.3s ease 0s;
+	}
+	.shoppm_submit:hover {
+		text-shadow: -1px -1px #444444;
+		color:#f5f5f5;
+		background-color:#008800;
+	}
+	.shoppmregis_submit {
+		padding:5px;
+		margin:0px;
+		width:100%;
+		height:30px;
+		text-shadow: -1px -1px #444444;
+		font-weight:bold;
+		color:#f5f5f5;
+		background-color:#008800;
+		border:0px solid #ffffff;
+		outline:none;
+		cursor:pointer;
+		-webkit-box-shadow: inset rgba(0,0,0,0.1) 0px -5px 10px;
+		-moz-box-shadow: inset rgba(0,0,0,0.1) 0px -5px 10px;
+		box-shadow: inset rgba(0,0,0,0.1) 0px -5px 10px;
+		box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		transition:all 0.3s ease 0s;
+	}
+	.shoppmregis_submit:hover {
+		background-color:#00aa00;
+	}
+	.pra_progressbar_container {
+		margin:0px auto;
+		width:350px;
+		height:27px;
+		background-color:#cccccc;
+		-webkit-border-radius:10px;
+		-moz-border-radius:10px;
+		border-radius:10px;
+		-webkit-box-shadow: inset rgba(0,0,0,0.5) 0px 0px 5px;
+		-moz-box-shadow: inset rgba(0,0,0,0.5) 0px 0px 5px;
+		box-shadow: inset rgba(0,0,0,0.5) 0px 0px 5px;
+		overflow:hidden;
+	}
+	.pra_progressbar {
+		width:100%;
+		height:27px;
+		-webkit-border-radius: 10px 0px 0px 10px;
+		-moz-border-radius: 10px 0px 0px 10px;
+		border-radius: 10px 0px 0px 10px;
+		-webkit-box-shadow: inset rgba(0,0,0,0.5) 0px 1px 3px;
+		-moz-box-shadow: inset rgba(0,0,0,0.5) 0px 1px 3px;
+		box-shadow: inset rgba(0,0,0,0.5) 0px 1px 3px;
+	}
+	.pravote_container {
+		-webkit-border-radius:7px;
+		-moz-border-radius:7px;
+		border-radius:7px;
+		-webkit-box-shadow: rgba(0,0,0,0.5) 0px 0px 7px;
+		-moz-box-shadow: rgba(0,0,0,0.5) 0px 0px 7px;
+		box-shadow: rgba(0,0,0,0.5) 0px 0px 7px;
+	}
+</style>
+                  <script>
+	function shoppm_signin(){
+		var username = $.trim($(".shoppm_username").val());
+		var password = $.trim($(".shoppm_password").val());
+		if( username != "" && password != "" ){
+			loading_show("black","");
+			$.ajax({
+				type: "POST",
+				url: "shop_query.php",
+				data: { do_what:"shoppm_signin", username:username, password:password, member:"<?=$_SESSION['shop_id']?>" },
+				cache: false,
+				success: function(result){
+					loading_hide();
+					result = $.trim(result);
+					if(result == "1"){
+						window.location.href = "shop_index.php?shop=<?=$_SESSION['shop_id']?>";
+					}else{
+						alert("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง");
+					}
+				}
+			});
+		}else{
+			alert("กรุณากรอกชื่อผู้ใช้และรหัสผ่าน");
+		}
+	}
+	function shoppm_message_add(){
+		var message = $.trim($(".shoppm_textarea").val());
+		if( $.trim(message) != "" ){
+			loading_show("black","");
+			$.ajax({
+				type: "POST",
+				url: "shop_query.php",
+				data: { do_what:"message_add", member:"<?=$_SESSION['shop_id']?>", message:message },
+				cache: false,
+				success: function(result){
+					$(".shoppm_textarea").val("");
+					loading_hide();
+				}
+			});
+		}else{
+			alert("กรุณากรอกข้อความก่อนส่งข้อความ");
+		}
+	}
+	function shoppm_translated_select(v){
+		var current_value = $(".shoppm_textarea").val();
+		$(".shoppm_textarea").val( current_value+" "+v );
+		$(".shoppm_translated_container").html("");
+		$(".shoppm_translate_text").val("");
+	}
+	function shoppm_translate_text(x_this){
+		var v = $.trim(x_this.val());
+		$.ajax({
+			type: "POST",
+			url: "shop_query.php",
+			data: { do_what:"translate", v:v },
+			cache: false,
+			success: function(result){
+				$(".shoppm_translated_container").html(result);
+			}
+		});
+	}
+	function shoppm_translate_leave(){
+		var v = $.trim($(".shoppm_translateleave_textbox").val());
+		if( $.trim(v) != "" ){
+			$.ajax({
+				type: "POST",
+				url: "shop_query.php",
+				data: { do_what:"shoppm_translate_leave", v:v },
+				cache: false,
+				success: function(result){
+					$(".shoppm_translateleave_textbox").val("");
+					alert(result);
+				}
+			});
+		}else{
+			alert("กรุณากรอกข้อความก่อนทำการฝากแปล");
+		}
+	}
+</script>
+                  <?php
+	if($_SESSION["member_id"] == ""){
+?>
+                  <div class="shoppm_container">
+                    <table style="width:100%; border:1px solid #e1e1e1; border-collapse:collapse;" width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td colspan="2" class="shoppm_title"> ระบบส่งข้อความ 2 ภาษา
+                          /
+                          送消息2种语言翻译系统 </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2"><textarea class="shoppm_textarea" style="height:70px;" onclick="javascrip:alert('สำหรับสมาชิกเท่านั้น / 您还未注册-登录');return false"></textarea></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="border-top:1px solid #e1e1e1;"><input class="shoppm_text" placeholder="ใส่คำที่ต้องการแปล /输入单词进行翻译" onclick="javascrip:alert('สำหรับสมาชิกเท่านั้น / 您还未注册-登录');return false" type="text"/></td>
+                      </tr>
+                      <tr style="border-top:1px solid #e1e1e1;">
+                        <td><input class="shoppm_text" placeholder="ใส่คำที่ฝากแปล" onclick="javascrip:alert(สำหรับสมาชิกเท่านั้น / 您还未注册-登录');return false" type="text"/></td>
+                        <td><input class="shoppmleave_submit" value="ฝากแปลภาษา / 存录为了帮我翻译" type="submit"/></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="border-top:1px solid #e1e1e1;"><input class="shoppm_submit" value="ส่งข้อความ / 发送" type="submit"/></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="border-top:1px solid #e1e1e1;"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td style="border-right:1px solid #e1e1e1;"><input class="shoppm_text shoppm_username" placeholder="username" type="text"/></td>
+                              <td><input class="shoppm_text shoppm_password" placeholder="password" type="password"/></td>
+                              <td><input class="shoppmleave_submit" onclick="shoppm_signin()" value="เข้าสู่ระบบ / 登录" type="submit"/></td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="border-top:1px solid #e1e1e1;"><a href="register_mem.php" target="_self">
+                          <input class="shoppmregis_submit" value="สมัครสมาชิกทั่วไป / 免费注册" type="button"/>
+                          </a></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <?php
+	}else{
+?>
+                  <div class="shoppm_container">
+                    <table style="width:100%; border:1px solid #e1e1e1; border-collapse:collapse;" width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td colspan="2" class="shoppm_title"> ระบบส่งข้อความ 2 ภาษา
+                          /
+                          送消息2种语言翻译系统 </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2"><textarea class="shoppm_textarea"></textarea></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="border-top:1px solid #e1e1e1;"><input class="shoppm_text shoppm_translate_text" onkeyup="shoppm_translate_text($(this))" placeholder="ใส่คำที่ต้องการแปล /输入单词进行翻译" type="text"/>
+                          <div style="position:relative; left:0px; top:0px;">
+                            <div class="shoppm_translated_container" style="position:absolute; left:0px; top:0px;"></div>
+                          </div></td>
+                      </tr>
+                      <tr style="border-top:1px solid #e1e1e1;">
+                        <td><input class="shoppm_text shoppm_translateleave_textbox" placeholder="ใส่คำที่ฝากแปล" type="text"/></td>
+                        <td><input class="shoppmleave_submit" onclick="shoppm_translate_leave();" value="ฝากแปลภาษา / 存录为了帮我翻译" type="submit"/></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="border-top:1px solid #e1e1e1;"><input class="shoppm_submit" onclick="shoppm_message_add();" value="ส่งข้อความ / 发送" type="button"/></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <?php
+	}
+?></td>
+              </tr>
+            </table></td>
+          <td width="28%" valign="top"><table width="250" border="0" align="center" cellpadding="1" cellspacing="0">
+              <tr>
+                <td colspan="2" style="padding-right:12px;"><table width="160" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td><img src="<?=($dbshop->f(head2)!="")?'img/head/'.$dbshop->f(head2):"images/logodefualt.jpg"?>" width="160" height="160"></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="3"></td>
+              </tr>
+              <tr>
+                <td align="center"><table style="border-collapse:collapse;" border="1" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td style="height:30px; text-align:center; white-space:nowrap;"> ความเชื่อถือร้านค้านี้/ 本店的信用与服务态度分数: </td>
+                    </tr>
+                    <tr>
+                      <td style="height:40px; text-align:center;"><img src="images/point.png" width="31" height="24" /> <img src="images/point.png" width="31" height="24" /> <img src="images/point.png" width="31" height="24" /> <img src="images/point.png" width="31" height="24" /> <img src="images/point.png" width="31" height="24" /></td>
+                    </tr>
+                    <tr>
+                      <td style="height:30px; text-align:center; white-space:nowrap;"> คะแนนรวม / 总分数 <span style="color:#ff0000;"> 9,999 </span></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="20" class="topic" style="text-align:center;"><span style="color:#000; padding-left:5px;"> ID ร้านค้า / 店: <span style="color:#ff0000;">
+                  <?=$dbshop->f(shop_id)?>
+                  </span> </span></td>
+              </tr>
+              <tr>
+                <td width="46%" height="20" align="left" style="color:#000; padding-left:5px">วันเปิดร้าน / 开店日期 : <span style="color:red">
+                  <?=date("d F Y",$timestamp)?>
+                  </span></td>
+              </tr>
+              <tr>
+                <td width="46%" height="20" align="left" style="color:#000; padding-left:5px">วันสิ้นสุด / 结束日期:
+                  (เหลืออีก / 剩下  วัน / 天)</td>
+              </tr>
+              <tr>
+                <td height="20" align="left" style="color:#000; padding-left:5px">มีสินค้าทั้งหมด / 总共商品 :
+                  <?=$num_rows?>
+                  ชิ้น 尊</td>
+              </tr>
+              <tr>
+                <td height="20" align="left" style="color:#000; padding-left:5px">ผู้เข้าชมทั้งหมด / 总共防客:
+                  <?=$dbshop->f(view_num)?>
+                  คน 位</td>
+              </tr>
+              <?
+							  /*
+							  Counter Information
+							  
+							  Website: http://www.free-php-counter.com/
+							  Version: Text version
+							  
+							  Installation help:
+							  
+							  http://www.free-php-counter.com/text-counter.php
+							  
+							  
+							  You like to remove the link on the counter? Click here and get an link free license:
+							  
+							  http://www.free-php-counter.com/adfree_counter.php
+							  */
+							  
+							  
+							  // edit counter settings here
+							  
+							  
+							  // absolut path to the folder containing counter.php and counter.gif (????????? / ???????????)
+							  // use $_SERVER['DOCUMENT_ROOT'] . "/" when the counter is in root dir
+							  /* use <? echo dirname($_SERVER['SCRIPT_FILENAME']) . "/"; ?> to get absolute path */
+							  $counter_path_absolut = dirname($_SERVER['SCRIPT_FILENAME'])."/";
+							  
+							  // http path to the folder containing counter.php and counter.gif (????????? / ???????????)
+							  // set http://www.your-homepage.com/ when the counter is in root dir
+							  $counter_path_http = "http://www.praasia.com/";
+							  
+							  // IP-lock in seconds
+							  $counter_expire = 600;
+							  
+							  
+							  // do not edit from here
+							  
+							  $counter_filename = $counter_path_absolut . "counter.txt";
+							  
+							  if (file_exists($counter_filename)) 
+							  {
+								 $ignore = false;
+								 $current_agent = (isset($_SERVER['HTTP_USER_AGENT'])) ? addslashes(trim($_SERVER['HTTP_USER_AGENT'])) : "no agent";
+								 $current_time = time();
+								 $current_ip = $_SERVER['REMOTE_ADDR']; 
+									
+								 // daten einlesen
+								 $c_file = array();
+								 $handle = fopen($counter_filename, "r");
+								 
+								 if ($handle)
+								 {
+									while (!feof($handle)) 
+									{
+									   $line = trim(fgets($handle, 4096)); 
+									   if ($line != "")
+										  $c_file[] = $line;		  
+									}
+									fclose ($handle);
+								 }
+								 else
+									$ignore = true;
+								 
+								 // bots ignorieren   
+								 if (substr_count($current_agent, "bot") > 0)
+									$ignore = true;
+									
+								 
+								 // hat diese ip einen eintrag in den letzten expire sec gehabt, dann igornieren?
+								 for ($i = 1; $i < sizeof($c_file); $i++)
+								 {
+									list($counter_ip, $counter_time) = explode("||", $c_file[$i]);
+									$counter_time = trim($counter_time);
+									
+									if ($counter_ip == $current_ip && $current_time-$counter_expire < $counter_time)
+									{
+									   // besucher wurde bereits gez?hlt, daher hier abbruch
+									   $ignore = true;
+									   break;
+									}
+								 }
+								 
+								 // counter hochz?hlen
+								 if ($ignore == false)
+								 {
+									if (sizeof($c_file) == 0)
+									{
+									   // wenn counter leer, dann f?llen      
+									   $add_line1 = date("z") . ":1||" . (date("z")-1) . ":0||" . date("W") . ":1||" . date("n") . ":1||" . date("Y") . ":1||1||1||" . $current_time . "\n";
+									   $add_line2 = $current_ip . "||" . $current_time . "\n";
+									   
+									   // daten schreiben
+									   $fp = fopen($counter_filename,"w+");
+									   if ($fp)
+									   {
+										  flock($fp, LOCK_EX);
+										  fwrite($fp, $add_line1);
+										  fwrite($fp, $add_line2);
+										  flock($fp, LOCK_UN);
+										  fclose($fp);
+									   }
+									   
+									   // werte zur verf?gung stellen
+									   $day = $yesterday = $week = $month = $year = $all = $record = 1;
+									   $record_time = $current_time;
+									   $online = 1;
+									}
+									else
+									{
+									   // counter hochz?hlen
+									   list($day_arr, $yesterday_arr, $week_arr, $month_arr, $year_arr, $all, $record, $record_time) = explode("||", $c_file[0]);
+									   
+									   $day_data = explode(":", $day_arr);
+									   $yesterday_data = explode(":", $yesterday_arr);
+											   
+									   // yesterday
+									   $yesterday = $yesterday_data[1];
+									   if ($day_data[0] == (date("z")-1)) 
+									   {
+										  $yesterday = $day_data[1]; 
+									   }
+									   else
+									   {
+										  if ($yesterday_data[0] != (date("z")-1))
+										  {
+											 $yesterday = 0; 
+										  }
+									   }
+									   
+									   // day
+									   $day = $day_data[1];
+									   if ($day_data[0] == date("z")) $day++; else $day = 1;
+									   
+									   // week
+									   $week_data = explode(":", $week_arr);
+									   $week = $week_data[1];
+									   if ($week_data[0] == date("W")) $week++; else $week = 1;
+									   
+									   // month
+									   $month_data = explode(":", $month_arr);
+									   $month = $month_data[1];
+									   if ($month_data[0] == date("n")) $month++; else $month = 1;
+									   
+									   // year
+									   $year_data = explode(":", $year_arr);
+									   $year = $year_data[1];
+									   if ($year_data[0] == date("Y")) $year++; else $year = 1;
+										
+									   // all
+									   $all++;
+									   
+									   // neuer record?
+									   $record_time = trim($record_time);
+									   if ($day > $record)
+									   {
+										  $record = $day;
+										  $record_time = $current_time;
+									   }
+									   
+									   // speichern und aufr?umen und anzahl der online leute bestimmten
+									   
+									   $online = 1;
+									   
+									   // daten schreiben
+									   $fp = fopen($counter_filename,"w+");
+									   if ($fp)
+									   {
+										  flock($fp, LOCK_EX);
+										  $add_line1 = date("z") . ":" . $day . "||" . (date("z")-1) . ":" . $yesterday . "||" . date("W") . ":" . $week . "||" . date("n") . ":" . $month . "||" . date("Y") . ":" . $year . "||" . $all . "||" . $record . "||" . $record_time . "\n";		 
+										  fwrite($fp, $add_line1);
+									   
+										  for ($i = 1; $i < sizeof($c_file); $i++)
+										  {
+											 list($counter_ip, $counter_time) = explode("||", $c_file[$i]);
+									
+											 // ?bernehmen
+											 if ($current_time-$counter_expire < $counter_time)
+											 {
+												$counter_time = trim($counter_time);
+												$add_line = $counter_ip . "||" . $counter_time . "\n";
+												fwrite($fp, $add_line);
+												$online++;
+											 }
+										  }
+										  $add_line = $current_ip . "||" . $current_time . "\n";
+										  fwrite($fp, $add_line);
+										  flock($fp, LOCK_UN);
+										  fclose($fp);
+									   }
+									}
+								 }
+								 else
+								 {
+									// nur zum anzeigen lesen
+									if (sizeof($c_file) > 0)
+									   list($day_arr, $yesterday_arr, $week_arr, $month_arr, $year_arr, $all, $record, $record_time) = explode("||", $c_file[0]);
+									else
+									   list($day_arr, $yesterday_arr, $week_arr, $month_arr, $year_arr, $all, $record, $record_time) = explode("||", date("z") . ":1||" . (date("z")-1) . ":0||" .  date("W") . ":1||" . date("n") . ":1||" . date("Y") . ":1||1||1||" . $current_time);
+									
+									// day
+									$day_data = explode(":", $day_arr);
+									$day = $day_data[1];
+									
+									// yesterday
+									$yesterday_data = explode(":", $yesterday_arr);
+									$yesterday = $yesterday_data[1];
+									
+									// week
+									$week_data = explode(":", $week_arr);
+									$week = $week_data[1];
+								  
+									// month
+									$month_data = explode(":", $month_arr);
+									$month = $month_data[1];
+									
+									// year
+									$year_data = explode(":", $year_arr);
+									$year = $year_data[1];
+									
+									$record_time = trim($record_time);
+									
+									$online = sizeof($c_file) - 1;
+								 }
+							  ?>
+              <tr>
+                <td height="20" align="left" style="color:#000; padding-left:5px">ออนไลน์ขณะนี้ / 在线访客: <? echo ($online*2)+220; ?> คน 位</td>
+              </tr>
+              <tr>
+                <td height="10"></td>
+              </tr>
+              <tr>
+                <td height="20" align="left" style="color:#000"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <?php
+						  if($dbshop->f(online)=='1'){
+					  ?>
+                    <tr>
+                      <td align="center"><img src="images/offline.png" width="103" height="26" /></td>
+                      <td align="center"><img src="images/online_o.png" width="103" height="26" /></td>
+                    </tr>
+                    <? } else { ?>
+                    <tr>
+                      <td align="center"><img src="images/offline_o.png" width="103" height="26" /></td>
+                      <td align="center"><img src="images/online.png" width="103" height="26" /></td>
+                    </tr>
+                    <? } ?>
+                  </table></td>
+              </tr>
+              <? } ?>
+            </table></td>
+          <td width="36%" valign="top" style="padding-top:15px"><table width="345" height="434" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td valign="top" style="background:url(images/shop_bg_detail.png);"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="35">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td><div style="position:relative; width:344px; height:388px; overflow:hidden;">
+                          <div style="color:#000; overflow-y:scroll; height:388px; width:364px">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                              <tr>
+                                <td><span style="color:#000">
+                                  <?=$dbshop->f(welcome)?>
+                                  </span></td>
+                              </tr>
+                              <tr>
+                                <td><table width="98%" border="0" cellspacing="0" cellpadding="3">
+                                    <tr>
+                                      <td align="center"><span style="color:#900; font-weight:bold">การรับประกัน / 如何保证产品 </span></td>
+                                    </tr>
+                                    <? if ($dbshop->f(warranty2)==1) { ?>
+                                    <tr>
+                                      <td>รับประกันพระแท้ภายในระยะเวลา / /保证真产品的期间内 <span style="font-weight:bold; color:#900; font-size:16px">
+                                        <?=$dbshop->f(warrantydetail1)?>
+                                        </span> วัน/ 天 นับแต่ลูกค้าได้รับพระไป / /算当天开始领到产品</td>
+                                    </tr>
+                                    <? } ?>
+                                    <? if ($dbshop->f(warranty3)==1) { ?>
+                                    <tr>
+                                      <td>รับประกันความพอใจในระยะเวลา / 保证满意的定期时间 <span style="font-weight:bold; color:#900; font-size:16px">
+                                        <?=$dbshop->f(warrantydetail2)?>
+                                        </span> วัน / 天 ไม่หักเปอร์เซ็นต์ / /不扣百分之 (เมื่อได้รับพระแล้วไม่ถูกใจ /意思是如领到后不满意) แต่หากเกินจำนวนวันหัก /但如超定期扣数目 <span style="font-weight:bold; color:#900; font-size:16px">
+                                        <?=$dbshop->f(warrantydetail3)?>
+                                        </span> %</td>
+                                    </tr>
+                                    <? } ?>
+                                    <? if ($dbshop->f(warranty4)==1) { ?>
+                                    <tr>
+                                      <td>พระต้องอยู่ในสภาพเดิม ไม่ชำรุดหักบิ่น เสียสภาพ ล้างผิว /产品要保持原样 不残破 断 洗皮</td>
+                                    </tr>
+                                    <? } ?>
+                                    <? if ($dbshop->f(warranty5)==1) { ?>
+                                    <tr>
+                                      <td>ยินดีรับซื้อคืนในราคาตลาดขณะนั้น /卖家满意买回当时产品的买卖价钱</td>
+                                    </tr>
+                                    <? } ?>
+                                    <? if ($dbshop->f(warranty6)==1) { ?>
+                                    <tr>
+                                      <td>นำมาแลกเปลี่ยน กับองค์ใหม่ได้ หากท่านต้องการซื้อพระองค์อื่นโดยหัก /产品交换，可以换新的产品，如买家需要换别的产品，将要扣百分之 <span style="font-weight:bold; color:#900; font-size:16px">
+                                        <?=$dbshop->f(warrantydetail4)?>
+                                        </span> %</td>
+                                    </tr>
+                                    <? } ?>
+                                  </table></td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="1"></td>
+  </tr>
+  <tr>
+    <td style="background:url(images/tab.jpg) no-repeat; font-weight:bold; font-size:16px; color:#7b3110" height="56" align="center"> รายการพระเด่น / 热门产品 </td>
+  </tr>
+  <tr>
+    <td height="618" valign="top" style="background:url(images/shop_recommend.jpg)"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="74%" height="35">&nbsp;</td>
+        </tr>
+        <tr>
+          <td style="padding-left:40px"><div style="width:925px; height:530px; overflow-y:scroll; overflow-x:hidden;">
+              <table width="920" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style="padding-left:13px; padding-top:5px"><? 	$q="SELECT * FROM `product` WHERE shop_id ='".$_SESSION['shop_id']."' AND hot = '1' AND active = '2' ORDER BY hotdate DESC  ";
+                        $dbhot= new nDB();
+                        $dbhot->query($q);
+                        while ($dbhot->next_record()) { ?>
+                    <table width="133" border="0" align="center" cellpadding="0" cellspacing="0" style="float:left; margin:5px">
+                      <tr>
+                        <td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$dbhot->f(product_id)?>"> <img src="<?=($dbhot->f(pic1)!="")?'/slir/w140-h135/img/amulet/'.$dbhot->f(pic1):"images/clear.gif"?>" alt="" width="140" height="135" border="0" /> </a></td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr>
+                        <td height="60px" valign="top" bgcolor="#666666"><table width="95%" border="0" align="center" cellpadding="3" cellspacing="0">
+                            <tr>
+                              <td><div style="position:relative;">
+                                  <div class="pravote_container" style="display:none; position:absolute; left:-200px; top:-250px;">
+                                    <table style="width:400px; height:170px; color:#ffcc02; background-color:#311407; border:1px solid #ffcc02; border-collapse:collapse;" border="0" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                        <td style="height:35px; text-align:center; font-weight:bold;"> คะแนนความน่าเชื่อถือสินค้านี้ / 这尊圣物的可靠性分数 </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="height:1px; text-align:center;">
+                                        	<?php
+			                                	if ($dbhot->f(score)>79) {
+			                                		if ($dbhot->f(score)>100) {
+			                                			$dbscore = 100;
+			                                		}else{
+			                                			$dbscore = $dbhot->f(score);
+			                                		}
+													$dbscoreprocess = $dbhot->f(score);
+													$colorprogress ="#00ff00";
+												}elseif ($dbhot->f(score)>29) {
+													$dbscore = $dbhot->f(score);
+													$dbscoreprocess = $dbhot->f(score);
+													$colorprogress ="#F7E81D";			
+												}else{
+													$dbscore = $dbhot->f(score);
+													$dbscoreprocess = $dbhot->f(score);
+													$colorprogress = "red";			
+												}
+											?>
+                                          <div class="pra_progressbar_container" style="width:100%;">
+                                            <table style="position:absolute; width:350px; height:27px;" border="0" cellpadding="0" cellspacing="0">
+                                              <tr>
+                                                <td style="text-align:center; vertical-align:middle; color:#000000;">
+                                                <?=$dbscore?>
+                                                  คะแนน / 分数 </td>
+                                              </tr>
+                                            </table>
+                                             <div class="pra_progressbar" style="width:<?=$dbscoreprocess?>%;background-color:<?=$colorprogress?>;">&nbsp;</div>
+                                          </div></td>
+                                      </tr>
+                                      <tr>
+                                        <td style="padding-top:5px; vertical-align:top;">
+                                        	<?php
+	                                		if ($dbhot->f(score)>=100) {
+	                                			?>
+	                                				<div class="box_vote">
+														สินค้าชิ้นนี้ได้รับรองจากคณะกรรมการเว็บพระเอเชียเรียบร้อยแล้ว ให้คะแนนเต็ม100% <br/><br/>本尊产品已被亚洲佛牌团队佛牌鉴定部给为满分100%
+	                                				</div>
+	                                			<?
+	                                		}else{
+	                                			?>
+	                                				<div class="box_vote">
+														กรุณาตรวดสอบให้แน่ชัดก่อนทำการชื้อขายสิ้นค้าชิ้นนี้ <br/><br/> 请各位小心或明确好这尊圣物是否真假后才进行交易
+	                                				</div>
+	                                			<?
+	                                		}
+	                                	?>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </div>
+                                <?php
+									if ($dbhot->f(score)>79) {
+										if ($dbhot->f(score)>=100) {
+											?>
+						                        <img onmouseover="$(this).parent().find('div:eq(1)').show();" onmouseout="$(this).parent().find('div:eq(1)').hide();" src="images/light-green.png" border="0" />
+						                    <?
+										}else{
+											?>
+						                        <img onmouseover="$(this).parent().find('div:eq(1)').show();" onmouseout="$(this).parent().find('div:eq(1)').hide();" src="images/flash-green.gif" border="0" />
+						                    <?
+										}
+									}elseif ($dbhot->f(score)>29) {
+										?>
+		                                img src="">g onmouseover="$(this).parent().find('div:eq(1)').show();" onmouseout="$(this).parent().find('div:eq(1)').hide();" src="images/flash-yellow.gif" border="0" />
+		                                <?
+									}else{
+										?>
+		                                	<img onmouseover="$(this).parent().find('div:eq(1)').show();" onmouseout="$(this).parent().find('div:eq(1)').hide();" src="images/flash-red.gif" border="0" />
+		                                <?
+									}
+								?>
+                                &nbsp; <span style="color:#0CF; font-weight:bold"> ID :
+                                <?=$dbhot->f(product_id)?>
+                                </span></td>
+                            </tr>
+                            <tr>
+                              <td height="25"><div style="position:relative; width:133px; height:67px; overflow:hidden;">
+                                  <div style="width:153px; overflow-y:scroll; overflow-x:hidden; height:67px ;">
+                                    <table width="129" cellpadding="1" cellspacing="0">
+                                      <tr>
+                                        <td colspan="2"><a href="shop_product.php?product_id=<?=$dbhot->f(product_id)?>"  title="<?=$dbhot->f(name)?>" > <span style="color:#FFF">
+                                          <?=$dbhot->f(name)?>
+                                          </span> </a></td>
+                                      </tr>
+                                      <? if($dbhot->f(detailcn1)!='') { ?>
+                                      <tr>
+                                        <td width="43" style="color:#FFF">名稱</td>
+                                        <td width="74" style="color:#FFF">:
+                                          <?=$dbhot->f(detailcn1)?></td>
+                                      </tr>
+                                      <? } ?>
+                                      <? if($dbhot->f(detailcn5)!='0') { ?>
+                                      <tr>
+                                        <td style="color:#FFF">第几帮</td>
+                                        <td style="color:#FFF"><?
+										  $q="SELECT * FROM `catalog_cn` WHERE catalog_id= '".$dbhot->f(detailcn5)."' ";
+										  $dbmix= new nDB();	
+										  $dbmix->query($q);
+										  $dbmix->next_record();
+										  ?>
+                                          <?=$dbmix->f(catalog_name_cn)?></td>
+                                      </tr>
+                                      <? } ?>
+                                      <? if($dbhot->f(detailcn10)!='') { ?>
+                                      <tr>
+                                        <td style="color:#FFF">高僧</td>
+                                        <td style="color:#FFF"><?=$dbhot->f(detailcn10)?></td>
+                                      </tr>
+                                      <? } ?>
+                                      <? if($dbhot->f(detailcn6)!='0') { ?>
+                                      <tr>
+                                        <td style="color:#FFF">模版</td>
+                                        <td style="color:#FFF"><?
+                                          $q="SELECT * FROM `catalog_cn` WHERE catalog_id= '".$dbhot->f(detailcn6)."' ";
+                                          $dbmix= new nDB();	
+                                          $dbmix->query($q);
+                                          $dbmix->next_record();
+                                          ?>
+                                          <?=$dbmix->f(catalog_name_cn)?></td>
+                                      </tr>
+                                      <? } ?>
+                                      <? if($dbhot->f(detailcn11)!='0') { ?>
+                                      <tr>
+                                        <td style="color:#FFF">年期</td>
+                                        <td style="color:#FFF"><?php
+                                              $q="SELECT * FROM `catalog_cn` WHERE catalog_id= '".$dbhot->f(detailcn11)."' ";
+                                              $dbmix= new nDB();	
+                                              $dbmix->query($q);
+                                              $dbmix->next_record();
+                                          ?>
+                                          <?=$dbmix->f(catalog_name_cn)?></td>
+                                      </tr>
+                                      <? } ?>
+                                      <? if($dbhot->f(detailcn9)!='') { ?>
+                                      <tr>
+                                        <td style="color:#FFF">佛寺</td>
+                                        <td style="color:#FFF"><?=$dbhot->f(detailcn9)?></td>
+                                      </tr>
+                                      <? } ?>
+                                    </table>
+                                  </div>
+                                </div></td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr>
+                        <td height="25" align="center" bgcolor="#333333"><table width="100%" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td width="63%" align="center"><span style="color:#FFF">
+                                <?php
+								if($dbhot->f(status) == 1){
+							?>
+                                <span style="color:#09F"> พระโชว์ / 展示 </span>
+                                <?php
+								}
+								if($dbhot->f(status) == 2){
+							?>
+                                <span style="color:#090"> ให้เช่า / 出售 </span>
+                                <?php
+								}
+								if($dbhot->f(status) == 3){
+							?>
+                                <span style="color:#FF0"> เปิดจอง / 预定 </span>
+                                <?php
+								}
+								if($dbhot->f(status) == 4){
+							?>
+                                <span style="color:#FC0"> จองแล้ว / 已定 </span>
+                                <?php
+								}
+								if($dbhot->f(status) == 5){
+							?>
+                                <span style="color:#F00"> ขายแล้ว / 已出售 </span>
+                                <?php
+								}
+							?>
+                                </span></td>
+                              <td width="37%"><table width="100%" border="0" cellspacing="0" cellpadding="3">
+                                  <tr>
+                                    <td width="20"><img src="images/view-icon.png" width="20" height="11" /></td>
+                                    <td><span style="color:#FFF">
+                                      <?=$dbhot->f(view_num)?>
+                                      </span></td>
+                                  </tr>
+                                </table></td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                    </table>
+                    <? } ?></td>
+                </tr>
+              </table>
+            </div></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td><table width="1000" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="images/shop_bh_catagory.jpg" width="1000" height="76" /></td>
+        </tr>
+        <tr>
+          <td style="background:url(images/tab.jpg) no-repeat; font-weight:bold; font-size:16px; color:#7b3110" height="56" align="center"> หมวดหมู่สินค้า / 
+            聖物分类</td>
+        </tr>
+        <tr>
+          <td style="background:url('images/shop_bg_catalog.jpg'); height:34"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <?php
+   $q="SELECT * FROM `catalog_shop` WHERE  shop_id = '".$_SESSION['shop_id']."' ORDER BY catalog_id ";
+   $p_r=1;
+   $db->query($q);
+   while($db->next_record()){
+   ?>
+              <?php if($p_r%2==1){ ?>
+              <tr>
+                <td width="49%" height="34" align="left" style="padding-left:160px; font-size:14px; border-bottom:1px solid #633503"><a href="shop_catalog.php?cat_id=<?=$db->f(catalog_id)?>" style="color:#fff22d">
+                  <?=$db->f(catalog_name)?>
+                  </a></td>
+                <? } ?>
+                <?php if($p_r%2==0){ ?>
+                <td width="51%" align="right" style="padding-right:160px; color:#fff22d; font-size:14px; border-bottom:1px solid #633503"><a href="shop_catalog.php?cat_id=<?=$db->f(catalog_id)?>" style="color:#fff22d">
+                  <?=$db->f(catalog_name)?>
+                  </a></td>
+              </tr>
+              <? }  ?>
+              <?php $p_r++; } ?>
+            </table></td>
+        </tr>
+        <tr>
+          <td><img src="images/shop_bt_catagory.jpg" width="1000" height="89" /></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><?php
+			  $q="SELECT * FROM `product` WHERE shop_id='".$_SESSION['shop_id']."' AND active = '2' ";
+			  $p_r=1;
+			  $db->query($q);							
+			  $total=$db->num_rows();							
+			  $q.=" ORDER BY order_num DESC LIMIT $s_page,$e_page";
+			  $db->query($q);
+			  while($db->next_record()){
+			  ?>
+            <table width="148" border="0" align="center" cellpadding="0" cellspacing="0" style="float:left; margin:5px">
+              <tr>
+                <td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td bgcolor="#000000"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"> <img src="<?=($db->f(pic1)!="")?'/slir/w155-h150/img/amulet/'.$db->f(pic1):"images/clear.gif"?>" alt="" width="155" height="150" border="0" /> </a></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="60px" valign="top" bgcolor="#666666">
+                	<table width="95%" border="0" align="center" cellpadding="3" cellspacing="0" >
+                    <tr>
+                      <td><div style="position:relative;">
+                          <div class="pravote_container" style="display:none; position:absolute; left:-200px; top:-250px;">
+                            <table style="width:400px; height:170px; color:#ffcc02; background-color:#311407; border:1px solid #ffcc02; border-collapse:collapse;" border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td style="height:35px; text-align:center; font-weight:bold;"> คะแนนความน่าเชื่อถือสินค้านี้ / 这尊圣物的可靠性分数 </td>
+                              </tr>
+                              <tr>
+                                <td style="height:1px; text-align:center;">
+                                <?php
+                                	if ($db->f(score)>79) {
+                                		if ($db->f(score)>100) {
+                                			$dbscore = 100;
+                                		}else{
+                                			$dbscore = $db->f(score);
+                                		}
+										$dbscoreprocess = $db->f(score);
+										$colorprogress ="#00ff00";
+									}elseif ($db->f(score)>29) {
+										$dbscore = $db->f(score);
+										$dbscoreprocess = $db->f(score);
+										$colorprogress ="#F7E81D";			
+									}else{
+										$dbscore = $db->f(score);
+										$dbscoreprocess = $db->f(score);
+										$colorprogress = "red";			
+									}
+								?>
+                                  <div class="pra_progressbar_container" style="width:100%;">
+                                    <table style="position:absolute; width:350px; height:27px;" border="0" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                        <td style="text-align:center; vertical-align:middle; color:#000000;"><?=$dbscore?>คะแนน / 分数 </td>
+                                      </tr>
+                                    </table>
+                                    <div class="pra_progressbar" style="width:<?=$dbscoreprocess?>%;background-color:<?=$colorprogress?>;">&nbsp;</div>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <td style="padding-top:5px; vertical-align:top;">
+                                	<?php
+                                		if ($db->f(score)>=100) {
+                                			?>
+                                				<div class="box_vote">
+													สินค้าชิ้นนี้ได้รับรองจากคณะกรรมการเว็บพระเอเชียเรียบร้อยแล้ว ให้คะแนนเต็ม100% <br/><br/>本尊产品已被亚洲佛牌团队佛牌鉴定部给为满分100%
+                                				</div>
+                                			<?
+                                		}else{
+                                			?>
+                                				<div class="box_vote">
+													กรุณาตรวดสอบให้แน่ชัดก่อนทำการชื้อขายสิ้นค้าชิ้นนี้ <br/><br/> 请各位小心或明确好这尊圣物是否真假后才进行交易
+                                				</div>
+                                			<?
+                                		}
+                                	?>
+                              	</td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                        <?php
+							if ($db->f(score)>79) {
+								if ($db->f(score)>=100) {
+									?>
+				                        <img onmouseover="$(this).parent().find('div:eq(1)').show();" onmouseout="$(this).parent().find('div:eq(1)').hide();" src="images/light-green.png" border="0" />
+				                    <?
+								}else{
+									?>
+				                        <img onmouseover="$(this).parent().find('div:eq(1)').show();" onmouseout="$(this).parent().find('div:eq(1)').hide();" src="images/flash-green.gif" border="0" />
+				                    <?
+								}
+							}elseif ($db->f(score)>29) {
+								?>
+			                        <img onmouseover="$(this).parent().find('div:eq(1)').show();" onmouseout="$(this).parent().find('div:eq(1)').hide();" src="images/flash-yellow.gif" border="0" />
+			                    <?
+							}else{
+								?>
+			                        <img onmouseover="$(this).parent().find('div:eq(1)').show();" onmouseout="$(this).parent().find('div:eq(1)').hide();" src="images/flash-red.gif" border="0" />
+			                    <?
+							}
+						?>
+                        &nbsp; <span style="color:#0CF; font-weight:bold"> ID :
+                        <?=$db->f(product_id)?>
+                        </span></td>
+                    </tr>
+                    <tr>
+                      <td height="25"><div style="width:145px; height:67px; overflow:hidden;">
+                          <div style="width:165px; overflow-y:scroll; overflow-x:hidden; height:67px ;">
+                            <table width="145" cellpadding="1" cellspacing="0">
+                              <tr>
+                                <td colspan="2"><a href="shop_product.php?product_id=<?=$db->f(product_id)?>"  title="<?=$db->f(name)?>" > <span style="color:#FFF">
+                                  <?=$db->f(name)?>
+                                  </span> </a></td>
+                              </tr>
+                              <? if($db->f(detailcn1)!='') { ?>
+                              <tr>
+                                <td width="30" style="color:#FFF" valign="top"> 名稱: </td>
+                                <td width="115" style="color:#FFF" valign="top"><?=$db->f(detailcn1)?></td>
+                              </tr>
+                              <? } ?>
+                              <? if($db->f(detailcn5)!='0') { ?>
+                              <tr>
+                                <td style="color:#FFF" valign="top"> 几帮: </td>
+                                <td style="color:#FFF" valign="top"><?php
+						$q="SELECT * FROM `catalog_cn` WHERE catalog_id= '".$db->f(detailcn5)."' ";
+						$dbmix= new nDB();	
+						$dbmix->query($q);
+						$dbmix->next_record();
+					?>
+                                  <?=$dbmix->f(catalog_name_cn)?></td>
+                              </tr>
+                              <? } ?>
+                              <? if($db->f(detailcn10)!='') { ?>
+                              <tr>
+                                <td style="color:#FFF" valign="top"> 高僧: </td>
+                                <td style="color:#FFF" valign="top"><?=$db->f(detailcn10)?></td>
+                              </tr>
+                              <? } ?>
+                              <? if($db->f(detailcn6)!='0') { ?>
+                              <tr>
+                                <td style="color:#FFF" valign="top"> 模版: </td>
+                                <td style="color:#FFF" valign="top"><?php
+						$q="SELECT * FROM `catalog_cn` WHERE catalog_id= '".$db->f(detailcn6)."' ";
+						$dbmix= new nDB();	
+						$dbmix->query($q);
+						$dbmix->next_record();
+					?>
+                                  <?=$dbmix->f(catalog_name_cn)?></td>
+                              </tr>
+                              <? } ?>
+                              <? if($db->f(detailcn11)!='0') { ?>
+                              <tr>
+                                <td style="color:#FFF" valign="top"> 年期: </td>
+                                <td style="color:#FFF" valign="top"><?php
+						$q="SELECT * FROM `catalog_cn` WHERE catalog_id= '".$db->f(detailcn11)."' ";
+						$dbmix= new nDB();	
+						$dbmix->query($q);
+						$dbmix->next_record();
+					?>
+                                  <?=$dbmix->f(catalog_name_cn)?></td>
+                              </tr>
+                              <? } ?>
+                              <? if($db->f(detailcn9)!='') { ?>
+                              <tr>
+                                <td style="color:#FFF" valign="top"> 佛寺: </td>
+                                <td style="color:#FFF" valign="top"><?=$db->f(detailcn9)?></td>
+                              </tr>
+                              <? } ?>
+                            </table>
+                          </div>
+                        </div></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="25" align="center" bgcolor="#333333"><table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="63%" align="center"><span style="color:#FFF">
+                        <?php
+								if($db->f(status) == 1){
+							?>
+                        <span style="color:#09F"> พระโชว์ / 展示 </span>
+                        <?php
+								}
+								if($db->f(status) == 2){
+							?>
+                        <span style="color:#090"> ให้เช่า / 出售 </span>
+                        <?php
+								}
+								if($db->f(status) == 3){
+							?>
+                        <span style="color:#FF0"> เปิดจอง / 预定 </span>
+                        <?php
+								}
+								if($db->f(status) == 4){
+							?>
+                        <span style="color:#FC0"> จองแล้ว / 已定 </span>
+                        <?php
+								}
+								if($db->f(status) == 5){
+							?>
+                        <span style="color:#F00"> ขายแล้ว / 已出售 </span>
+                        <?php
+								}
+							?>
+                        </span></td>
+                      <td width="37%"><table width="100%" border="0" cellspacing="0" cellpadding="3">
+                          <tr>
+                            <td width="20"><img src="images/view-icon.png" width="20" height="11" /></td>
+                            <td><span style="color:#FFF">
+                              <?=$db->f(view_num)?>
+                              </span></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table>
+            <?php } ?></td>
+        </tr>
+        <tr>
+          <td height="30" colspan="10" align="center" style="color:#F00"><?php  sh_page($total,$s_page,$e_page,$chk_page,Previous,Next,"#F00","#FFFFFF"); // นำไปวางในตำแหน่งที่ต้องการแสดง ?></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td><?php
+				include("shop_chatbox_message.php");
+			?></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/banner-s.jpg" width="959" height="86" /></td>
+  </tr>
+  <tr>
+    <td><img src="images/footer.jpg" width="1000" height="136"></td>
+  </tr>
+  <tr>
+  	<td align="center">
+            <!--BEGIN WEB STAT CODE-->
+<script type="text/javascript" src="http://hits.truehits.in.th/data/t0031244.js"></script>
+<noscript>
+<a target="_blank" href="http://truehits.net/stat.php?id=t0031244"><img src="http://hits.truehits.in.th/noscript.php?id=t0031244" alt="Thailand Web Stat" border="0" width="14" height="17" /></a>
+<a target="_blank" href="http://truehits.net/">Truehits.net</a>
+</noscript>
+<!-- END WEBSTAT CODE -->    
+    </td>
+  </tr>  
+</table>
+<!-- End Save for Web Slices --> 
+
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+</script>
+</body>
+</html>
