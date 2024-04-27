@@ -1,0 +1,24 @@
+{
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "printWidth": 120,
+  "semi": true,
+  "singleQuote": true,
+  "bracketSameLine": true,
+  "useTabs": true,
+  "singleAttributePerLine": true,
+  "plugins": [
+    "@prettier/plugin-php"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.php"
+      ],
+      "options": {
+        "parser": "php",
+        "tabWidth": 2
+      }
+    }
+  ]
+}

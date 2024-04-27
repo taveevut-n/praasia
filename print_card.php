@@ -26,9 +26,9 @@ $certficate->next_record();
 	<script type="text/javascript" src="http://iswallows.com/func/jquery.print.js"></script>
 </head>
 <body>
-              <?php
-				QRcode::png($certficate->f(cert_amulet).",".$certficate->f(cert_skin).",".$certficate->f(cert_year).",".$certficate->f(cert_detail)."view" , "../certificate_qr/".$certficate->f(cert_id).".png", "L", 16, 2);
-			   ?>
+  <?php
+  QRcode::png($certficate->f(cert_amulet).",".$certficate->f(cert_skin).",".$certficate->f(cert_year).",".$certficate->f(cert_detail)."view" , "../certificate_qr/".$certficate->f(cert_id).".png", "L", 16, 2);
+  ?>
 <div class="print_container">
 <table width="960" border="0" cellspacing="0" cellpadding="3">
   <tr>
